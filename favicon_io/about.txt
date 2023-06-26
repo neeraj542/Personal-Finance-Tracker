@@ -1,0 +1,6 @@
+This favicon was generated using the following font:
+
+- Font Title: Karla
+- Font Author: Copyright 2019 The Karla Project Authors (https://github.com/googlefonts/karla)
+- Font Source: http://fonts.gstatic.com/s/karla/v23/qkBIXvYC6trAT55ZBi1ueQVIjQTD-JqqFENLR7fHGw.ttf
+- Font License: SIL Open Font License, 1.1 (http://scripts.sil.org/OFL))
