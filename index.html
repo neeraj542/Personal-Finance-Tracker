@@ -1,31 +1,47 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link
+      rel="icon"
+      type="image/x-icon"
+      href="./favicon_io/android-chrome-512x512.png"
+      sizes="64x64"
+    />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/feather-icons/dist/feather.min.css"
+    />
+    <script src="https://unpkg.com/feather-icons"></script>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+    />
+    <title>Finance Tracker - A Personal Finance App</title>
+  </head>
 
-<head>
-  <meta charset="UTF-8">
-  <link rel="icon" type="image/x-icon" href="./favicon_io/android-chrome-512x512.png" sizes="64x64">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="style.css">
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/feather-icons/dist/feather.min.css">
-  <script src="https://unpkg.com/feather-icons"></script>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
-  <title>Finance Tracker - A Personal Finance App</title>
-</head>
-
-<body>
-  <!-- <header class="header-part"> -->
+  <body>
+    <!-- <header class="header-part"> -->
     <nav>
       <div class="navbar">
-        <a href="#" class="logo"><i class="fas fa-chart-line"></i> Finance Tracker</a>
+        <a href="#" class="logo"
+          ><i class="fas fa-chart-line"></i> Finance Tracker</a
+        >
         <ul class="nav-links">
           <li><a href="#">Home</a></li>
           <li><a href="#tracker">Use Tracker</a></li>
-            <li><a href="#how-it-works">How it works</a></li>
-            <li><a href="#">Support</a></li>
+          <li><a href="#how-it-works">How it works</a></li>
+          <li><a href="#">Support</a></li>
         </ul>
         <div class="buttons">
-          <a href="./login.html" class="btn-head"><i class="fas fa-sign-in-alt"></i> Log In</a>
-          <a href="./sign-up.html" class="btn-head"><i class="fas fa-user-plus"></i> Sign Up</a>
+          <a href="./login.html" class="btn-head"
+            ><i class="fas fa-sign-in-alt"></i> Log In</a
+          >
+          <a href="./sign-up.html" class="btn-head"
+            ><i class="fas fa-user-plus"></i> Sign Up</a
+          >
         </div>
         <!-- <div class="menu-toggle">
             <i class="fas fa-bars"></i>
@@ -33,22 +49,25 @@
       </div>
     </nav>
 
-
     <!-- Landing Page Content -->
     <section class="section-box">
-        <div class="main-landing">
-            <div class="content">
-                <h1 class="under-welcome-h1">Take Control of Your Finances</h1>
-                <div class="under-h1"></div>
-                <p class="under-welcome-p">Track your income and expenses effortlessly. Manage your budget, set financial goals, and make smarter decisions for a more secure future.</p>
-                <button class="under-welcome-btn">Sign Up Now</button>
-            </div>
-            <div class="under-welcome-image">
-              <img src="./assets/makeme.png" alt="Power Finance">
-            </div>
+      <div class="main-landing">
+        <div class="content">
+          <h1 class="under-welcome-h1">Take Control of Your Finances</h1>
+          <div class="under-h1"></div>
+          <p class="under-welcome-p">
+            Track your income and expenses effortlessly. Manage your budget, set
+            financial goals, and make smarter decisions for a more secure
+            future.
+          </p>
+          <button class="under-welcome-btn">Sign Up Now</button>
         </div>
-        
-    </section><br>
+        <div class="under-welcome-image">
+          <img src="./assets/makeme.png" alt="Power Finance" />
+        </div>
+      </div>
+    </section>
+    <br />
     <div class="arrow">
       <a href="#tracker " class="scroll-link">
         <!-- <span></span> -->
@@ -58,16 +77,17 @@
     </div>
 
     <section class="main-content" id="tracker">
-      <div class="head-text" >
+      <div class="head-text">
         <h1>Access Your Personal Finance Tracker</h1>
         <div class="under-head-text"></div>
-      </div><br>
-    
+      </div>
+      <br />
+
       <div class="tracker-part">
         <div class="tracker-balance">
           Current Balance: <span id="balance" class="current-balance"></span>
-        </div>        
-    
+        </div>
+
         <div class="currency-filter">
           <div class="filter-left">
             <label for="currency">Select Currency:</label>
@@ -79,13 +99,13 @@
           </div>
           <div class="filter-right">
             <label for="text" class="date-box">Choose Date:</label>
-            <input type="date" id="date" placeholder="Date">
-          </div> 
+            <input type="date" id="date" placeholder="Date" />
+          </div>
         </div>
-    
+
         <div class="transaction-form">
-          <input type="text" id="description" placeholder="Description">
-          <input type="number" id="amount" placeholder="Amount">
+          <input type="text" id="description" placeholder="Description" />
+          <input type="number" id="amount" placeholder="Amount" />
           <select id="type">
             <option value="income">Income</option>
             <option value="expense">Expense</option>
@@ -105,15 +125,17 @@
         </div>
       </div>
     </section>
-    
+
     <section class="how-it-works" id="how-it-works">
       <div class="head-text">
         <h1>How it works</h1>
         <div class="under-head-text"></div>
-      </div><br>
+      </div>
+      <br />
       <div class="working-content">
         <div class="left-working">
-          <h5 class="working-head">Experience the power of
+          <h5 class="working-head">
+            Experience the power of
             <span class="text-lightBlue">Personal Finance Tracker</span>
           </h5>
           <!-- <div class="under-h1"></div> -->
@@ -147,24 +169,70 @@
         </div>
         <div class="right-working-image">
           <!-- <div class="under-welcome-image"> -->
-            <img src="./assets/how-it-works.png" target="_self" alt="Power Finance">
+          <img
+            src="./assets/how-it-works.png"
+            target="_self"
+            alt="Power Finance"
+          />
           <!-- </div> -->
         </div>
       </div>
     </section>
-  <footer>
-    <div class="footer">
-      <!-- <ul>
-        <li><a href="#">Privacy Policy</a></li>
-        <li><a href="#">Terms of Service</a></li>
-        <li><a href="#">Contact Us</a></li>
-      </ul> -->
-      <p>Created by Neeraj Meena, Full Stack Developer</p>
-    </div>
-  </footer>
-  <script>feather.replace();</script>
-  <script src="script.js"></script>
-  <script src="https://kit.fontawesome.com/your-font-awesome-kit.js" crossorigin="anonymous"></script>
-</body>
 
+    <!--  Footer Code    -->
+
+    <div class="footer-basic">
+      <footer>
+        <div class="social">
+          <a href="https://github.com"
+            ><img src="icons/github.png" class="icon-style" alt="Github icon"
+          /></a>
+          <!--  You can add any other social details in the same format as github, twitter, etc.   -->
+          <a href="https://www.twitter.com"
+            ><img src="icons/twitter.png" class="icon-style" alt="Twitter icon"
+          /></a>
+          <a href="https://www.gmail.com"
+            ><img src="icons/gmail.png" class="icon-style" alt="Emailicon"
+          /></a>
+          <a href="https://www.facebook.com"
+            ><img
+              src="icons/facebook.png"
+              class="icon-style"
+              alt="Facebook icon"
+          /></a>
+          <a href="https://www.instagram.com"
+            ><img
+              src="icons/instagram.png"
+              class="icon-style"
+              alt="Instagram icon"
+          /></a>
+        </div>
+        <ul class="list-inline">
+          <li class="list-inline-item"><a href=" # ">Home</a></li>
+          <!-- Add the details/link  which are related to the project-->
+          <li class="list-inline-item"><a href=" # ">Contact</a></li>
+          <!-- Add the required contact details.  -->
+          <li class="list-inline-item"><a href=" # ">Services</a></li>
+          <!-- Add the details/link to the services you provide. -->
+          <li class="list-inline-item"><a href=" # ">About</a></li>
+          <!-- Add the details/link about the project-->
+          <li class="list-inline-item"><a href=" # ">Terms</a></li>
+          <!-- Add the details/link to the terms of the website. -->
+          <li class="list-inline-item"><a href=" # ">Privacy Policy</a></li>
+          <!-- Add the details/link of Privacy Policy of the the website. -->
+        </ul>
+        <p class="copyright">Created by Neeraj Meena © 2023</p>
+      </footer>
+    </div>
+
+    <!--    Footer Code ends     -->
+    <script>
+      feather.replace();
+    </script>
+    <script src="script.js"></script>
+    <script
+      src="https://kit.fontawesome.com/your-font-awesome-kit.js"
+      crossorigin="anonymous"
+    ></script>
+  </body>
 </html>
