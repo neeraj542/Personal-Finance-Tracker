@@ -701,20 +701,7 @@ footer {
         align-items: flex-start;
         margin-top: 15px;
       }
-      /* Footer styles */
-      .footer {
-          padding: 10px;
-      }
-  
-      .footer ul {
-          display: flex;
-          flex-wrap: wrap;
-          justify-content: center;
-      }
-  
-      .footer li {
-          margin-right: 10px;
-          margin-bottom: 10px;
+    }
       }
     }
     
