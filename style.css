@@ -534,6 +534,7 @@
     flex-direction: row;
     box-sizing: border-box;
     margin-bottom: 100%;
+
     /* border: 2px solid yellow; */
   }
   .head-text {
@@ -702,7 +703,20 @@ footer {
         align-items: flex-start;
         margin-top: 15px;
       }
-    }
+      /* Footer styles */
+      .footer {
+          padding: 10px;
+      }
+  
+      .footer ul {
+          display: flex;
+          flex-wrap: wrap;
+          justify-content: center;
+      }
+  
+      .footer li {
+          margin-right: 10px;
+          margin-bottom: 10px;
       }
     }
     
