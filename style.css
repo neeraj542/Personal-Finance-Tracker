@@ -1,3 +1,4 @@
+
 * {
     margin: 0;
     padding: 0;
@@ -270,7 +271,7 @@
     justify-content: space-between;
     align-items: center;
     margin: 0 auto;
-    height: 80vh;
+    /* height: 80vh; */
     padding: 20px;
     color: white;
     flex-direction: row;
@@ -528,7 +529,7 @@
     justify-content: space-between;
     align-items: center;
     margin: 0 auto;
-    height: 80vh;
+    /* height: 80vh; THIS WAS WHAT WAS CAUSING THE CLASH OF ELEMENTS OF FOOTER AND HOW IT WORKS CONTENT */
     padding: 20px;
     color: white;
     flex-direction: row;
@@ -629,7 +630,7 @@
     background-color: rgb(255, 0, 0);
     transform: translate(0, -2px);
   }
-  
+
 footer {
     background-color: #0c0935;
     padding: 20px;
@@ -645,15 +646,27 @@ footer {
     margin: 0;
 }
 .footer li {
-    margin: 0 20px;
+  margin-right: 34px;
+  list-style: none;
+}
+.footer p {
+  color: #fff;
+  text-decoration: none;
+  font-size: 18px;
+  align-items: center;
+  padding-top: 10px;
 }
 .footer a {
-    color: white;
-    text-decoration: none;
-    transition: color 0.3s;
+  color: #fff;
+  text-decoration: none;
+  display: flex;
+  font-size: 18px;
+  align-items: center;
 }
 .footer a:hover{
-    color: #c53d3d;
+  transition: all 0.3s ease 0s;
+  color: orangered;
+  cursor: pointer;
 }
     /* Media queries for responsiveness */
     @media screen and (max-width: 768px) {
