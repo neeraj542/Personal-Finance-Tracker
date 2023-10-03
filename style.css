@@ -636,8 +636,8 @@
 
 .footer-basic {
   padding: 40px 0;
-  background-color: #ffffff;
-  color: #2c2c2c;
+  background-color: #0b0081;
+  color: #ffffff;
     text-align: center;
 }
 
@@ -686,7 +686,7 @@ footer {
   display: inline-block;
   text-align: center;
   border-radius: 50%;
-  border: 1px solid #ccc;
+  border: 1px solid #000000;
   margin: 0 8px;
   color: inherit;
   opacity: 0.75;
@@ -700,7 +700,7 @@ footer {
   margin-top: 15px;
   text-align: center;
   font-size: 13px;
-  color: #0080ff;
+  color: #ffffff;
   margin-bottom: 0;
 }
 
@@ -709,11 +709,18 @@ footer {
   padding: 0;
   margin: 0;
   display: flex;
-  
+  flex-wrap: wrap;  /* Allow items to wrap to the next line on small screens */
+  justify-content: center;  /* Center items horizontally */
 }
 .list-inline-item {
   margin-right: 15px;      /* Adjust the spacing as needed */
 }
+/* Media query for screens smaller than 768px (typical mobile screens) */
+@media (max-width: 768px) {
+  .list-inline-item {
+    margin-right: 0;
+    /* Remove right margin on small screens */
+  }
 
   /*   Footer Code Ends    */
     
@@ -767,4 +774,4 @@ footer {
 
     
     }
-    
+  }
