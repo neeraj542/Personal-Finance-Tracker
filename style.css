@@ -534,6 +534,8 @@
     color: white;
     flex-direction: row;
     box-sizing: border-box;
+    margin-bottom: 100%;
+
     /* border: 2px solid yellow; */
   }
   .head-text {
