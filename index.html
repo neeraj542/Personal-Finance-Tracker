@@ -1,170 +1,54 @@
 <!DOCTYPE html>
 <html lang="en">
-
+ 
 <head>
-  <meta charset="UTF-8">
-  <link rel="icon" type="image/x-icon" href="./favicon_io/android-chrome-512x512.png" sizes="64x64">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="style.css">
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/feather-icons/dist/feather.min.css">
-  <script src="https://unpkg.com/feather-icons"></script>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
-  <title>Finance Tracker - A Personal Finance App</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="style.css">
+    <title>Calculator</title>
 </head>
-
+ 
 <body>
-  <!-- <header class="header-part"> -->
-    <nav>
-      <div class="navbar">
-        <a href="#" class="logo"><i class="fas fa-chart-line"></i> Finance Tracker</a>
-        <ul class="nav-links">
-          <li><a href="#">Home</a></li>
-          <li><a href="#tracker">Use Tracker</a></li>
-            <li><a href="#how-it-works">How it works</a></li>
-            <li><a href="#">Support</a></li>
-        </ul>
-        <div class="buttons">
-          <a href="./login.html" class="btn-head"><i class="fas fa-sign-in-alt"></i> Log In</a>
-          <a href="./sign-up.html" class="btn-head"><i class="fas fa-user-plus"></i> Sign Up</a>
+    <div class="container">
+        <div class="calculator">
+            <input type="text" name="screen" id="display" placeholder="0">
+            <table>
+                <tr>
+                    <td><button class="operator" >(</button></td>
+                    <td><button class="operator" >)</button></td>
+                    <td><button class="operator" >C</button></td>
+                    <td><button  class="operator" >=</button></td>
+                </tr>
+                <tr>
+                    <td><button>9</button></td>
+                    <td><button>8</button></td>
+                    <td><button>7</button></td>
+                    <td><button class="operator" >+</button></td>
+                </tr>
+                <tr>
+                    <td><button>6</button></td>
+                    <td><button>5</button></td>
+                    <td><button>4</button></td>
+                    <td><button class="operator" >-</button></td>
+                </tr>
+                <tr>
+                    <td><button>3</button></td>
+                    <td><button>2</button></td>
+                    <td><button>1</button></td>
+                    <td><button class="operator" >X</button></td>
+                </tr>
+                <tr>
+                    <td><button>0</button></td>
+                    <td><button>.</button></td>
+                    <td><button>%</button></td>
+                    <td><button class="operator" >/</button></td>
+                </tr>
+            </table>
         </div>
-        <!-- <div class="menu-toggle">
-            <i class="fas fa-bars"></i>
-        </div> -->
-      </div>
-    </nav>
-
-
-    <!-- Landing Page Content -->
-    <section class="section-box">
-        <div class="main-landing">
-            <div class="content">
-                <h1 class="under-welcome-h1">Take Control of Your Finances</h1>
-                <div class="under-h1"></div>
-                <p class="under-welcome-p">Track your income and expenses effortlessly. Manage your budget, set financial goals, and make smarter decisions for more secure future.</p>
-                <button class="under-welcome-btn">Sign Up Now</button>
-            </div>
-            <div class="under-welcome-image">
-              <img src="./assets/makeme.png" alt="Power Finance">
-            </div>
-        </div>
-        
-    </section><br>
-    <div class="arrow">
-      <a href="#tracker " class="scroll-link">
-        <!-- <span></span> -->
-        <!-- <span></span> -->
-        <span></span>
-      </a>
     </div>
-
-    <section class="main-content" id="tracker">
-      <div class="head-text" >
-        <h1>Access Your Personal Finance Tracker</h1>
-        <div class="under-head-text"></div>
-      </div><br>
-    
-      <div class="tracker-part">
-        <div class="tracker-balance">
-          Current Balance: <span id="balance" class="current-balance"></span>
-        </div>        
-    
-        <div class="currency-filter">
-          <div class="filter-left">
-            <label for="currency">Select Currency:</label>
-            <select id="currency" onchange="updateBalance()">
-              <option value="USD">USD</option>
-              <option value="EUR">EUR</option>
-              <option value="INR" selected>INR</option>
-            </select>
-          </div>
-          <div class="filter-right">
-            <label for="text" class="date-box">Choose Date:</label>
-            <input type="date" id="date" placeholder="Date">
-          </div> 
-        </div>
-    
-        <div class="transaction-form">
-          <input type="text" id="description" placeholder="Description">
-          <input type="number" id="amount" placeholder="Amount">
-          <select id="type">
-            <option value="income">Income</option>
-            <option value="expense">Expense</option>
-          </select>
-          <button onclick="addTransaction()">Add Transaction</button>
-        </div>
-        <div class="table-part" id="table-part">
-          <table id="transaction-table">
-            <tr>
-              <th>Date</th>
-              <th>Description</th>
-              <th>Amount</th>
-              <th>Type</th>
-              <th>Action</th>
-            </tr>
-          </table>
-        </div>
-      </div>
-    </section>
-    
-    <section class="how-it-works" id="how-it-works">
-      <div class="head-text">
-        <h1>How it works</h1>
-        <div class="under-head-text"></div>
-      </div><br>
-      <div class="working-content">
-        <div class="left-working">
-          <h5 class="working-head">Experience the power of
-            <span class="text-lightBlue">Personal Finance Tracker</span>
-          </h5>
-          <!-- <div class="under-h1"></div> -->
-          <ul class="ul-items">
-            <li class="check-list-items">
-              <i data-feather="check" class="feather icon-check"></i>
-              <span>Track effortlessly</span>
-            </li>
-            <li class="check-list-items">
-              <i data-feather="check" class="feather icon-check"></i>
-              <span>Control transactions</span>
-            </li>
-            <li class="check-list-items">
-              <i data-feather="check" class="feather icon-check"></i>
-              <span>Customize currencies</span>
-            </li>
-            <li class="check-list-items">
-              <i class="icon-check" data-feather="check"></i>
-              <span>Edit with ease</span>
-            </li>
-            <li class="check-list-items">
-              <i data-feather="check" class="feather icon-check"></i>
-              <span>Real-time balance</span>
-            </li>
-            <li class="check-list-items">
-              <i data-feather="check" class="feather icon-check"></i>
-              <span>Secure data protection</span>
-            </li>
-          </ul>
-          <button class="sign-up-button-btn">Sign Up Now</button>
-        </div>
-        <div class="right-working-image">
-          <!-- <div class="under-welcome-image"> -->
-            <img src="./assets/how-it-works.png" target="_self" alt="Power Finance">
-          <!-- </div> -->
-        </div>
-      </div>
-    </section>
-  <footer>
-    <div class="footer">
-      <!-- <ul>
-        <li><a href="#">Privacy Policy</a></li>
-        <li><a href="#">Terms of Service</a></li>
-        <li><a href="#">Contact Us</a></li>
-      </ul> -->
-      <p>Created by Neeraj Meena, Full Stack MERN Developer</p>
-    </div>
-  </footer>
-  <script>feather.replace();</script>
-  <script src="script.js"></script>
-  <script src="https://kit.fontawesome.com/your-font-awesome-kit.js" crossorigin="anonymous"></script>
+ 
 </body>
-
+<script src="script.js"></script>
+ 
 </html>
