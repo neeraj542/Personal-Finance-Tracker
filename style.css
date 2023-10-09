@@ -15,6 +15,10 @@ body {
   background-color: #0b0081;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 nav {
   position: fixed;
   top: 0;
@@ -139,6 +143,10 @@ nav {
   .menu-toggle {
     margin-left: auto;
   }
+  .under-welcome-h1 {
+    text-align: start;
+    margin-top: 154px; /* Adjust the margin-top as needed */
+  }
 }
 
 .section-box {
@@ -179,6 +187,7 @@ nav {
   /* float: left; */
   text-align: start;
   margin-bottom: 20px;
+  text-wrap: balance;
 }
 .under-h1 {
   width: 29px;
@@ -220,6 +229,14 @@ nav {
 .under-welcome-image {
   width: 100%;
   max-width: 680px;
+}
+
+@media screen and (max-width: 768px) {
+  .main-landing {
+    justify-content: space-evenly;
+    flex-direction: column;
+    height: 40vh;
+  }
 }
 /* Content styles */
 /* .content {
@@ -337,6 +354,25 @@ img {
   margin-bottom: 20px;
 }
 
+@media screen and (max-width: 768px) {
+  .content {
+    margin-top: 154px;
+  }
+  .main-content {
+    height: 60vh;
+  }
+
+  .transaction-form {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .date-box {
+    display: block;
+    margin-bottom: 5px;
+  }
+}
+
 .transaction-form input[type="text"],
 .transaction-form input[type="number"],
 .transaction-form select,
@@ -370,6 +406,13 @@ img {
   margin-bottom: 20px;
   gap: 180px;
   flex: 1;
+}
+
+@media screen and (max-width: 768px) {
+  .currency-filter {
+    flex-direction: column;
+    gap: 20px;
+  }
 }
 
 #currency {
@@ -451,6 +494,12 @@ td {
 th:last-child,
 td:last-child {
   border-right: none; /* Remove the right border for the last column */
+}
+
+@media screen and (max-width: 768px) {
+  .table-part {
+    overflow: scroll;
+  }
 }
 
 .delete-button {
@@ -535,6 +584,13 @@ td:last-child {
   box-sizing: border-box;
   /* border: 2px solid yellow; */
 }
+
+@media screen and (max-width: 768px) {
+  .how-it-works {
+    height: 60vh;
+  }
+}
+
 .head-text {
   text-align: center;
 }
@@ -562,6 +618,18 @@ td:last-child {
   width: 70%;
   margin-left: 20px;
 }
+
+@media screen and (max-width: 768px) {
+  .working-content {
+    flex-direction: column-reverse;
+    gap: 20px;
+  }
+
+  .left-working {
+    margin-left: 0;
+  }
+}
+
 .text-lightBlue {
   color: orangered;
 }
@@ -572,6 +640,7 @@ td:last-child {
   /* line-height: 10; */
   font-weight: bold;
   max-width: 500px;
+  text-wrap: balance;
 }
 
 .ul-items {
@@ -591,6 +660,7 @@ td:last-child {
 
 .ul-items > * + * {
   margin-top: 0.6rem;
+  text-wrap: balance;
 }
 
 .right-working-image {
@@ -658,6 +728,9 @@ footer {
 
 /* Media queries for responsiveness */
 @media screen and (max-width: 768px) {
+  .footer {
+    text-wrap: balance;
+  }
   .navbar {
     flex-direction: column;
     align-items: flex-start;
