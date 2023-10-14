@@ -113,6 +113,28 @@ nav {
   border: 1px solid #fff;
   border-radius: 2px;
 }
+.arrow{
+  animation: updown 1s ease-in-out infinite ;
+  animation-direction: alternate;
+}
+
+.top-btn{
+  margin-left: 95%;
+  margin-top: 20px;
+  width: 30px;
+  height: 30px;
+  background: transparent;
+  cursor: pointer;
+}
+
+@keyframes updown{
+  from{
+    transform: translateY(-50px);
+  }
+  to{
+    transform:translateY(-10px);
+  }
+}
 
 /* Mobile Responsive Styles */
 
