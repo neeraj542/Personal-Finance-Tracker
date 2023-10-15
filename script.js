@@ -13,7 +13,7 @@ const transactionTable = document.getElementById("transaction-table");
 // Function to check the number of entries and apply scrollbar if needed
 function checkTableScroll() {
   const rowCount = transactionTable.rows.length - 1; // Exclude the header row
-  const maxRowCount = 4; // Set the desired maximum number of entries
+  const maxRowCount = 10; // Set the desired maximum number of entries
 
   if (rowCount > maxRowCount) {
     tablePart.classList.add("scrollable");
