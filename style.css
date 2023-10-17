@@ -353,13 +353,19 @@ img {
 .transaction-form button {
   padding: 5px 10px;
   font-size: 16px;
-  border-radius: 30px;
+  border-radius: 10px;
   height: 39px;
+  margin-left: 8px;
   border: 1px solid #18ad1d;
   background-color: #18ad1d;
   color: #fff;
-  /* border: none; */
+  /*border: none;
+  */
   cursor: pointer;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  -ms-border-radius: 10px;
+  -o-border-radius: 10px;
 }
 
 .currency-filter {
@@ -473,7 +479,7 @@ td:last-child {
 }
 
 .save-button {
-  background-color: #02a305;
+  background-color: #2cb530;
   color: #fff;
   border: none;
   padding: 5px 10px;
