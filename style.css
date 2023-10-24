@@ -12,7 +12,7 @@
 
 body {
   scroll-behavior: smooth;
-  background-color: #0b0081;
+  background-color: #00b4d8;
 }
 
 nav {
@@ -21,7 +21,7 @@ nav {
   left: 0;
   width: 100%;
   /* background-color: transparent; */
-  background-color: #0b0081;
+  background-color: #00b4d8;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -143,7 +143,7 @@ nav {
 
 .section-box {
   position: relative;
-  background-color: #0b0081;
+  background-color: #00b4d8;
 }
 
 /* Landing Page Styles */
@@ -212,7 +212,7 @@ nav {
 
 .under-welcome-btn:hover {
   background-color: rgb(255, 0, 0);
-  color: #0b0081;
+  color: #caf0f8;
   transition: 0.5s;
   cursor: pointer;
 }
@@ -303,6 +303,7 @@ img {
   padding: 0px;
   box-sizing: border-box;
   overflow-y: auto; /* Enable vertical scrollbar */
+  background-color: #ffc2d1;
 }
 
 .tracker-h1 {
@@ -441,7 +442,7 @@ th {
 td {
   padding: 10px;
   text-align: left;
-  color: #0b0081;
+  color: #caf0f8;
   min-width: none;
   font-weight: lighter;
   border-top: 1px solid #ddd;
@@ -541,6 +542,7 @@ td:last-child {
 }
 
 .working-content {
+  background-color: #ffd6a5;
   display: flex;
   max-width: 1100px;
   justify-content: space-between;
@@ -634,7 +636,7 @@ td:last-child {
 footer {
   width: 100vw;
   height: 3.5rem;
-  background-color: #0b0081;
+  background-color: #ffb4a2;
   padding: 20px;
   color: #fff;
   text-align: center;
