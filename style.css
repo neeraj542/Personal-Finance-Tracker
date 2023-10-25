@@ -112,6 +112,12 @@ nav {
   text-decoration: none;
   border: 1px solid #fff;
   border-radius: 2px;
+  transition-duration: 200ms;
+}
+.buttons :hover{
+  color: 	orangered;
+  border: 1px solid 	orangered;
+  transition: 0.5s;
 }
 
 /* Mobile Responsive Styles */
