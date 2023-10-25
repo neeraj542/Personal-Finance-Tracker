@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <link rel="icon" type="image/x-icon" href="./favicon_io/android-chrome-512x512.png" sizes="64x64">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="support.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/feather-icons/dist/feather.min.css">
+  <script src="https://unpkg.com/feather-icons"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+  <title>Finance Tracker - A Personal Finance App</title>
+</head>
+
+<body>
+  <!-- <header class="header-part"> -->
+    <nav>
+      <div class="navbar">
+        <a href="#" class="logo"
+          ><i class="fas fa-chart-line"></i> Finance Tracker</a
+        >
+        <ul class="nav-links">
+          <li><a href="#">Home</a></li>
+          <li><a href="#tracker">Use Tracker</a></li>
+          <li><a href="#how-it-works">How it works</a></li>
+          <li><a href="./support.html">Support</a></li>
+        </ul>
+        <div class="buttons">
+          <a href="./login.html" class="btn-head"
+            ><i class="fas fa-sign-in-alt"></i> Log In</a
+          >
+          <a href="./sign-up.html" class="btn-head"
+            ><i class="fas fa-user-plus"></i> Sign Up</a>
+          
+        </div>
+        <!-- <div class="menu-toggle">
+            <i class="fas fa-bars"></i>
+        </div> -->
+      </div>
+    </nav>
+    <div class="container">
+      <form class="signup-form" action="/signup" method="post">
+        <h2>How can we help you?</h2>
+        <div class="form-group">
+          <label for="fullname">Full Name <span>*</span></label>
+          <input type="text" id="fullname" name="fullname" required>
+        </div>
+        <div class="form-group">
+          <label for="email">Email Address <span>*</span></label>
+          <input type="email" id="email" name="email" required>
+        </div>
+        <!-- <div class="form-group">
+          <label for="username">Username</label>
+          <input type="text" id="username" name="username" required>
+        </div> -->
+        
+        <div class="form-group">
+          <label for="query">Query <span>*</span></label>
+          <textarea name="query" id="query"></textarea>
+        </div>
+        <button type="submit">Submit</button>
+      </form>
+    </div>
+
+<footer>
+  <div class="footer">
+    <ul>
+      <li><a href="#">Privacy Policy</a></li>
+      <li><a href="#">Terms of Service</a></li>
+      <li><a href="#">Contact Us</a></li>
+    </ul>
+  </div>
+</footer>
+<script>feather.replace();</script>
+<script src="script.js"></script>
+<script src="https://kit.fontawesome.com/your-font-awesome-kit.js" crossorigin="anonymous"></script>
+</body>
+</html>
