@@ -110,8 +110,14 @@ nav {
   color: #fff;
   font-size: 16px;
   text-decoration: none;
-  border: 1px solid #fff;
+  border:  #fff;
   border-radius: 2px;
+  transition-duration: 200ms;
+}
+.buttons :hover{
+  transition: 0.5s;
+  color:orangered;
+  border: 1px solid orangered;
 }
 
 /* Mobile Responsive Styles */
