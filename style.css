@@ -113,6 +113,14 @@ nav {
   border: 1px solid #fff;
   border-radius: 2px;
 }
+.btn-head:hover {
+  /* background-color: #f44336; */
+
+  background-color: rgb(132, 115, 233);
+  transform: translate(0, -2px);
+
+  border: #0b0081;
+}
 
 /* Mobile Responsive Styles */
 
@@ -628,6 +636,7 @@ td:last-child {
   /* background-color: #f44336; */
   background-color: rgb(255, 0, 0);
   transform: translate(0, -2px);
+  box-shadow: #f44336 2px 2px 6px 3px;
 }
 
 /* Footer styles */
