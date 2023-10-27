@@ -28,9 +28,6 @@ Contributions are welcome! If you have any suggestions, bug reports, or feature 
 
 This project is licensed under the [MIT License](LICENSE).
 
-## Contributors
-
-The [specification](https://allcontributors.org/docs/en/specification) is detailed on [allcontributors.org](https://allcontributors.org)
 
 ## Acknowledgements
 
