@@ -19,7 +19,7 @@ pipeline {
             steps {
                 // Copy the code to the Apache document root directory
                 bat script: '''
-                    xcopy /s /e /y "'https://github.com/neeraj542/Personal-Finance-Tracker.git'" "C:\\Apache24\\htdocs"
+                    xcopy /s /e /y "https://github.com/neeraj542/Personal-Finance-Tracker.git" "C:\\Apache24\\htdocs"
                 '''
             }
         }
