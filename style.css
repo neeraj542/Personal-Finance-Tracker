@@ -12,7 +12,8 @@
 
 body {
   scroll-behavior: smooth;
-  background-color: #0b0081;
+  /* background-color: #0b0081; */
+  background-color: #3d4daa;
 }
 
 nav {
@@ -21,7 +22,8 @@ nav {
   left: 0;
   width: 100%;
   /* background-color: transparent; */
-  background-color: #0b0081;
+  /* background-color: #0b0081; */
+  background-color: #3d4daa;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -143,7 +145,7 @@ nav {
 
 .section-box {
   position: relative;
-  background-color: #0b0081;
+  /* background-color: #0b0081; */
 }
 
 /* Landing Page Styles */
@@ -634,7 +636,8 @@ td:last-child {
 footer {
   width: 100vw;
   height: 3.5rem;
-  background-color: #0b0081;
+  /* background-color: #0b0081; */
+  background-color: #3d4daa;
   padding: 20px;
   color: #fff;
   text-align: center;
@@ -657,6 +660,45 @@ footer {
   text-decoration: none;
 }
 
+.footer p{
+  margin-top: 50px;
+  padding: 50px 0px;
+}
+
+
+@media(max-width: 1241px) {
+  .logo{
+    font-size: 22px;
+  }
+
+  .nav-links a{
+    font-size: 16px;
+  }
+
+  .content {
+    margin-top: 157px;
+  } 
+
+  .under-welcome-image {
+    width: 80%;
+    max-width: 624px;
+    margin-top: 123px;
+  }
+
+.main-landing {
+  margin: 25px auto;
+}
+
+.working-content {
+  margin: 32px auto;
+  padding: 56px;
+}
+
+.footer p {
+  margin-top: 340px;
+  padding: 40px 0px;
+}
+}
 /* Media queries for responsiveness */
 @media screen and (max-width: 768px) {
   .navbar {
