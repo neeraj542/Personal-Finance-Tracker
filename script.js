@@ -303,6 +303,11 @@ function updateTransactionTable() {
   });
 }
 
+//Scroll to top button
+let backToTop = document.getElementsByClassName("top-btn");
+backToTop[0].onclick=function(){window.scrollTo({ top: 0, behavior:'smooth' })};
+
+
 // Event listener for the Add Transaction button
 document
   .getElementById("add-transaction-btn")
