@@ -356,8 +356,8 @@ img {
   border-radius: 10px;
   margin-left: 8px;
   height: 39px;
-  border: 1px solid #18ad1d;
-  background-color: #18ad1d;
+  border: 1px solid #18ad97;
+  background-color: #01010b;
   color: #fff;
   /* border: none; */
   cursor: pointer;
@@ -718,4 +718,231 @@ footer {
     margin-right: 10px;
     margin-bottom: 10px;
   }
+}
+
+
+
+/* my implement css in buttons  */
+.button-signup {
+  padding: 0.4em 1.5em;
+  border: none;
+  outline: none;
+  color: rgb(233, 237, 237);
+  background: #032b3c;
+  cursor: pointer;
+  position: relative;
+  z-index: 0;
+  border-radius: 20px;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  font-size: 16px; /* Smaller font size */
+  transition: transform 0.2s ease, color 0.2s ease;
+}
+
+.button-signup:before {
+  content: "";
+  background: linear-gradient(
+    45deg,
+    #ff0000,
+    #ff7300,
+    #fffb00,
+    #48ff00,
+    #00ffd5,
+    #002bff,
+    #7a00ff,
+    #ff00c8,
+    #ff0000
+  );
+  position: absolute;
+  top: -2px;
+  left: -2px;
+  background-size: 400%;
+  z-index: -1;
+  filter: blur(8px);
+  width: calc(100% + 4px);
+  height: calc(100% + 4px);
+  animation: glowing-button-signup 10s linear infinite;
+  transition: opacity 0.3s ease-in-out;
+  border-radius: 20px;
+}
+
+@keyframes glowing-button-signup {
+  0% {
+    background-position: 0 0;
+  }
+  50% {
+    background-position: 400% 0;
+  }
+  100% {
+    background-position: 0 0;
+  }
+}
+
+.button-signup:after {
+  z-index: -1;
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: rgba(19, 3, 109, 0.8);
+  left: 0;
+  top: 0;
+  border-radius: 20px;
+}
+
+.button-signup:hover {
+  transform: scale(1.05);
+  background: rgba(3, 43, 60, 0.9);
+  color: rgb(197, 226, 32);
+}
+
+.button-signup:focus {
+  outline: 3px solid #fffb00;
+}
+
+
+
+
+
+
+
+
+ 
+
+/* login signup button  */
+.button-nav {
+  --c: #fff;
+  background: linear-gradient(90deg, #0000 33%, #ff005f, #00bfff, #0000 67%) var(--_p, 100%)/300% no-repeat, 
+              #004dff;
+  color: #0000;
+  border: none;
+  transform: perspective(500px) rotateY(calc(20deg * var(--_i, -1)));
+  text-shadow: calc(var(--i, -1) * 0.08em) -0.01em 0 var(--c),
+               calc(var(--i, -1) * -0.08em) 0.01em 2px rgba(0, 0, 0, 0.4);
+  outline-offset: 0.1em;
+  transition: 0.3s;
+  font-weight: bold;
+  font-size: 1.2rem;
+  padding: 0.1em 0.3em;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+.button-nav:hover,
+.button-nav:focus-visible {
+  --_p: 0%;
+  --_i: 1;
+  background: linear-gradient(90deg, #ff005f, #00bfff);
+  color: #fff;
+}
+
+.button-nav:active {
+  text-shadow: none;
+  color: var(--c);
+  box-shadow: inset 0 0 9px rgba(0, 0, 0, 0.5);
+  transition: 0s;
+}
+
+.button-nav:focus {
+  outline: 2px solid #ff005f;
+}
+
+
+
+
+
+
+
+/* button for submission  */
+.button-submission {
+  align-items: center;
+  background-image: linear-gradient(144deg, #AF40FF, #5B42F3 50%, #00DDEB);
+  border: 0;
+  border-radius: 12px;  
+  box-shadow: rgba(151, 65, 252, 0.3) 0 15px 30px -5px;  
+  box-sizing: border-box;
+  color: #FFFFFF;
+  display: flex;
+  font-family: 'Phantomsans', sans-serif;
+  font-size: 18px; 
+  justify-content: center;
+  line-height: 1em;
+  max-width: 100%;
+  min-width: 140px;
+  padding: 5px;  
+  text-decoration: none;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  white-space: nowrap;
+  cursor: pointer;
+  transition: transform 0.2s ease;  
+}
+
+.button-submission:active,
+.button-submission:hover {
+  outline: 0;
+  transform: scale(1.05);  
+}
+
+.button-submission span {
+  background-color: rgba(5, 6, 45, 0.9);  
+  padding: 16px 24px;
+  border-radius: 8px;  
+  width: 100%;
+  height: 100%;
+  transition: background 300ms;
+}
+
+.button-submission:hover span {
+  background: none;  
+}
+
+@media (min-width: 768px) {
+  .button-submission {
+    font-size: 22px;  
+    min-width: 180px; 
+  }
+}
+
+
+
+
+
+
+
+/* for finance section button */
+.button-finance {
+  background-color: #007bff;  
+  border-radius: 100px;
+  box-shadow: rgba(44, 187, 99, .2) 0 -25px 18px -14px inset,
+              rgba(44, 187, 99, .15) 0 1px 2px,
+              rgba(44, 187, 99, .15) 0 2px 4px,
+              rgba(44, 187, 99, .15) 0 4px 8px,
+              rgba(44, 187, 99, .15) 0 8px 16px,
+              rgba(44, 187, 99, .15) 0 16px 32px;
+  color: white; /* Changed text color to white for contrast */
+  cursor: pointer;
+  display: inline-block;
+  font-family: CerebriSans-Regular, -apple-system, system-ui, Roboto, sans-serif;
+  padding: 7px 20px;
+  text-align: center;
+  text-decoration: none;
+  transition: all 250ms;
+  border: 0;
+  font-size: 16px;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+}
+
+.button-finance:hover {
+  box-shadow: rgba(44, 187, 99, .35) 0 -25px 18px -14px inset,
+              rgba(44, 187, 99, .25) 0 1px 2px,
+              rgba(44, 187, 99, .25) 0 2px 4px,
+              rgba(44, 187, 99, .25) 0 4px 8px,
+              rgba(44, 187, 99, .25) 0 8px 16px,
+              rgba(44, 187, 99, .25) 0 16px 32px;
+  transform: scale(1.05) rotate(-1deg);
 }
