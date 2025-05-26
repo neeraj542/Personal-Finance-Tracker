@@ -35,7 +35,7 @@
     </nav>
 
     <div class="container">
-        <form class="signup-form" action="https://finance542.netlify.app/" method="post">
+        <form class="signup-form" action="https://finance542.netlify.app/" method="post" id="signupForm">
           <h2>Sign Up</h2>
           <div class="form-group">
             <label for="fullname">Full Name <span>*</span></label>
@@ -77,6 +77,25 @@
   <script>feather.replace();</script>
   <script src="script.js"></script>
   <script src="https://kit.fontawesome.com/your-font-awesome-kit.js" crossorigin="anonymous"></script>
+
+  <script>
+  document.getElementById('signupForm').addEventListener('submit', function(e) {
+    e.preventDefault(); 
+
+    const fullname = document.getElementById('fullname').value.trim();
+    const email = document.getElementById('email').value.trim();
+    const mobile = document.getElementById('mobile').value.trim();
+    const password = document.getElementById('password').value.trim();
+    const confirmPassword = document.getElementById('confirm-password').value.trim();
+
+    if (fullname && email && mobile && password && confirmPassword) {
+      window.location.href = 'index.html';
+    } else {
+      alert('Please fill in all fields.');
+    }
+  });
+</script>
+
 </body>
 
 </html>
