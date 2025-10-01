@@ -1,6 +1,3 @@
-Certainly! Here’s a well-structured **CONTRIBUTING.md** file for your [Personal-Finance-Tracker](https://github.com/neeraj542/Personal-Finance-Tracker) project:
-
----
 
 # Contributing to Personal Finance Tracker
 
@@ -105,6 +102,3 @@ By contributing, you agree that your contributions will be licensed under the [M
 
 Thank you for helping make Personal Finance Tracker better!
 
----
-
-Would you like this file added to your repository automatically?
