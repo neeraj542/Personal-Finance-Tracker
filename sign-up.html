@@ -17,7 +17,7 @@
   <!-- <header class="header-part"> -->
     <nav>
       <div class="navbar">
-        <a href="#" class="logo"><i class="fas fa-chart-line"></i> Finance Tracker</a>
+        <a href="./index.html" class="logo"><i class="fas fa-chart-line"></i> Finance Tracker</a>
         <ul class="nav-links">
           <li><a href="./index.html">Home</a></li>
           <!-- <li><a href="">Use Tracker</a></li> -->
@@ -25,7 +25,7 @@
           <li><a href="#">Support</a></li> -->
         </ul>
         <div class="buttons">
-          <a href="https://finance542.netlify.app/" class="btn-head"><i class="fas fa-sign-in-alt"></i> Log In</a>
+          <a href="./login.html" class="btn-head"><i class="fas fa-sign-in-alt"></i> Log In</a>
           
         </div>
         <!-- <div class="menu-toggle">
@@ -35,7 +35,7 @@
     </nav>
 
     <div class="container">
-        <form class="signup-form" action="https://finance542.netlify.app/" method="post">
+        <form class="signup-form" action="https://finance542.netlify.app/" method="post" id="signupForm">
           <h2>Sign Up</h2>
           <div class="form-group">
             <label for="fullname">Full Name <span>*</span></label>
@@ -77,6 +77,25 @@
   <script>feather.replace();</script>
   <script src="script.js"></script>
   <script src="https://kit.fontawesome.com/your-font-awesome-kit.js" crossorigin="anonymous"></script>
+
+  <script>
+  document.getElementById('signupForm').addEventListener('submit', function(e) {
+    e.preventDefault(); 
+
+    const fullname = document.getElementById('fullname').value.trim();
+    const email = document.getElementById('email').value.trim();
+    const mobile = document.getElementById('mobile').value.trim();
+    const password = document.getElementById('password').value.trim();
+    const confirmPassword = document.getElementById('confirm-password').value.trim();
+
+    if (fullname && email && mobile && password && confirmPassword) {
+      window.location.href = 'index.html';
+    } else {
+      alert('Please fill in all fields.');
+    }
+  });
+</script>
+
 </body>
 
 </html>

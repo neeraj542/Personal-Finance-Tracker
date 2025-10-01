@@ -35,7 +35,7 @@
     </nav>
 
     <div class="container">
-        <form class="login-form" action="/login" method="post">
+        <form class="login-form" action="/login" method="post" id="loginForm">
           <h2>Login</h2>
           <div class="form-group">
             <label for="username">Username</label>
@@ -64,5 +64,22 @@
   <script>feather.replace();</script>
   <script src="script.js"></script>
   <script src="https://kit.fontawesome.com/your-font-awesome-kit.js" crossorigin="anonymous"></script>
+
+  <script>
+  document.getElementById('loginForm').addEventListener('submit', function(e) {
+    e.preventDefault(); 
+
+    
+    const username = document.getElementById('username').value.trim();
+    const password = document.getElementById('password').value.trim();
+
+    if (username && password) {
+      window.location.href = 'index.html';
+    } else {
+      alert('Please fill in both fields.');
+    }
+  });
+</script>
+
 </body>
 </html>
