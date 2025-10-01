@@ -719,3 +719,261 @@ footer {
     margin-bottom: 10px;
   }
 }
+
+/* Invite Section Styles */
+.invite-section {
+  width: 90%;
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 60px 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #0b0081;
+}
+
+.invite-container {
+  max-width: 600px;
+  width: 100%;
+  margin: 0 auto;
+}
+
+.invite-card {
+  background: #ffffff;
+  border-radius: 12px;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
+  padding: 0;
+  overflow: hidden;
+  margin: 20px 0;
+  border: 2px solid #dde8ff;
+}
+
+.invite-header {
+  text-align: center;
+  font-size: 24px;
+  margin-bottom: 20px;
+  font-weight: bolder;
+  color: #0b0081;
+  background-color: #dde8ff;
+  padding: 12px;
+}
+
+.invite-content {
+  padding: 30px;
+}
+
+.email-invite {
+  margin-bottom: 25px;
+}
+
+.email-input {
+  width: 100%;
+  padding: 12px 16px;
+  border: 2px solid #dde8ff;
+  border-radius: 8px;
+  font-size: 16px;
+  background-color: #ffffff;
+  color: #0b0081;
+  margin-bottom: 12px;
+  transition: all 0.3s ease;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  touch-action: manipulation;
+}
+
+.email-input:focus {
+  outline: none;
+  border-color: #0b0081;
+  background-color: #ffffff;
+  box-shadow: 0 0 0 3px rgba(11, 0, 129, 0.1);
+}
+
+.send-invite-btn {
+  width: 100%;
+  padding: 12px 24px;
+  background-color: orangered;
+  color: #ffffff;
+  border: none;
+  border-radius: 8px;
+  font-size: 16px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  -webkit-tap-highlight-color: transparent;
+  touch-action: manipulation;
+  min-height: 44px; /* Minimum touch target size */
+}
+
+.send-invite-btn:hover {
+  background-color: rgb(255, 0, 0);
+  transform: translateY(-1px);
+  box-shadow: 0 4px 8px rgba(255, 69, 0, 0.3);
+}
+
+.social-share {
+  display: flex;
+  gap: 12px;
+  justify-content: space-between;
+}
+
+.linkedin-share-btn,
+.twitter-share-btn {
+  flex: 1;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 8px;
+  font-size: 16px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  -webkit-tap-highlight-color: transparent;
+  touch-action: manipulation;
+  min-height: 44px; /* Minimum touch target size */
+}
+
+.linkedin-share-btn {
+  background-color: #0077b5;
+  color: #ffffff;
+  border: 2px solid #0077b5;
+}
+
+.linkedin-share-btn:hover {
+  background-color: #005885;
+  color: #ffffff;
+  transform: translateY(-1px);
+  box-shadow: 0 4px 8px rgba(0, 119, 181, 0.3);
+}
+
+.twitter-share-btn {
+  background-color: #0b0081;
+  color: #ffffff;
+  border: 2px solid #0b0081;
+}
+
+.twitter-share-btn:hover {
+  background-color: #ffffff;
+  color: #0b0081;
+  transform: translateY(-1px);
+  box-shadow: 0 4px 8px rgba(11, 0, 129, 0.3);
+}
+
+/* Responsive Design for Invite Section */
+@media (max-width: 768px) {
+  .invite-section {
+    width: 95%;
+    padding: 40px 10px;
+  }
+  
+  .invite-section .head-text h1 {
+    font-size: 28px;
+    text-align: center;
+  }
+  
+  .invite-container {
+    max-width: 100%;
+    padding: 0 10px;
+  }
+  
+  .invite-card {
+    margin: 10px 0;
+    border-radius: 8px;
+  }
+  
+  .invite-header {
+    padding: 15px;
+  }
+  
+  .invite-header h2 {
+    font-size: 20px;
+  }
+  
+  .invite-content {
+    padding: 20px 15px;
+  }
+  
+  .email-input {
+    font-size: 16px; /* Prevents zoom on iOS */
+    padding: 14px 16px;
+  }
+  
+  .send-invite-btn {
+    padding: 14px 24px;
+    font-size: 16px;
+  }
+  
+  .social-share {
+    flex-direction: column;
+    gap: 10px;
+  }
+  
+  .linkedin-share-btn,
+  .twitter-share-btn {
+    width: 100%;
+    padding: 14px 20px;
+    font-size: 16px;
+  }
+}
+
+@media (max-width: 480px) {
+  .invite-section {
+    width: 98%;
+    padding: 30px 5px;
+  }
+  
+  .invite-section .head-text h1 {
+    font-size: 24px;
+    line-height: 1.2;
+  }
+  
+  .invite-card {
+    margin: 5px 0;
+  }
+  
+  .invite-header {
+    padding: 12px;
+  }
+  
+  .invite-header h2 {
+    font-size: 18px;
+  }
+  
+  .invite-content {
+    padding: 15px 12px;
+  }
+  
+  .email-input {
+    padding: 12px 14px;
+    font-size: 16px;
+  }
+  
+  .send-invite-btn {
+    padding: 12px 20px;
+  }
+  
+  .linkedin-share-btn,
+  .twitter-share-btn {
+    padding: 12px 16px;
+  }
+}
+
+/* Invite Section Title Styling to match existing design */
+.invite-section .head-text h1 {
+  color: white;
+  font-size: 40px;
+  font-weight: bolder;
+  margin-bottom: 20px;
+}
+
+.invite-section .under-head-text {
+  width: 60px;
+  height: 4px;
+  background-color: #f4ff61;
+  margin: 0 auto 20px auto;
+}

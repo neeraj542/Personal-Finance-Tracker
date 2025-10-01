@@ -36,6 +36,7 @@
           <li><a href="#">Home</a></li>
           <li><a href="#tracker">Use Tracker</a></li>
           <li><a href="#how-it-works">How it works</a></li>
+          <li><a href="#invite">Community</a></li>
           <li><a href="./support.html">Support</a></li>
         </ul>
         <div class="buttons">
@@ -181,6 +182,47 @@
         </div>
       </div>
     </section>
+
+    <!-- Invite Section -->
+    <section class="invite-section" id="invite">
+      <div class="head-text">
+        <h1>Community Invite</h1>
+        <div class="under-head-text"></div>
+      </div>
+      <br />
+      
+      <div class="invite-container">
+        <div class="invite-card">
+          <div class="invite-header">
+            <h2>Join our community</h2>
+          </div>
+          
+          <div class="invite-content">
+            <div class="email-invite">
+              <input 
+                type="email" 
+                id="invite-email" 
+                placeholder="Enter an email address" 
+                class="email-input"
+              />
+              <button onclick="sendEmailInvite()" class="send-invite-btn">
+                Send invite
+              </button>
+            </div>
+            
+            <div class="social-share">
+              <button onclick="shareOnLinkedIn()" class="linkedin-share-btn">
+                <i class="fab fa-linkedin-in"></i> Share
+              </button>
+              <button onclick="shareOnTwitter()" class="twitter-share-btn">
+                <i class="fab fa-twitter"></i> Tweet
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
     <footer>
       <div class="footer">
         <!-- <ul>

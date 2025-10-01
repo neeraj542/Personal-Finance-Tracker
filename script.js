@@ -399,3 +399,125 @@ function exportToCSV() {
   link.download = "transactions.csv";
   link.click();
 }
+
+// Invite Section Functions
+function sendEmailInvite() {
+  const emailInput = document.getElementById('invite-email');
+  const email = emailInput.value.trim();
+  
+  if (!email) {
+    alert('Please enter an email address');
+    return;
+  }
+  
+  if (!isValidEmail(email)) {
+    alert('Please enter a valid email address');
+    return;
+  }
+  
+  // Create mailto link with pre-filled subject and body
+  const subject = 'Join our Personal Finance Tracker community!';
+  const body = `Hi! I've been using this amazing Personal Finance Tracker app to manage my finances and I thought you might find it useful too. It helps you track income, expenses, and manage your budget effectively. Check it out: ${window.location.href}`;
+  
+  const mailtoLink = `mailto:${email}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+  
+  // Open the default email client
+  window.location.href = mailtoLink;
+  
+  // Clear the input
+  emailInput.value = '';
+  
+  // Show success message
+  showNotification('Community invite sent!', 'success');
+}
+
+function shareOnLinkedIn() {
+  const url = encodeURIComponent(window.location.href);
+  const text = encodeURIComponent('Join our Personal Finance Tracker community! Track your finances effortlessly.');
+  const linkedinUrl = `https://www.linkedin.com/sharing/share-offsite/?url=${url}`;
+  
+  // Open LinkedIn share dialog in a new window
+  window.open(linkedinUrl, 'linkedin-share', 'width=600,height=400,scrollbars=yes,resizable=yes');
+  
+  showNotification('LinkedIn share opened!', 'success');
+}
+
+function shareOnTwitter() {
+  const url = encodeURIComponent(window.location.href);
+  const text = encodeURIComponent('Join our Personal Finance Tracker community! Track your finances effortlessly.');
+  const twitterUrl = `https://twitter.com/intent/tweet?url=${url}&text=${text}`;
+  
+  // Open Twitter share dialog in a new window
+  window.open(twitterUrl, 'twitter-share', 'width=600,height=400,scrollbars=yes,resizable=yes');
+  
+  showNotification('Community share opened!', 'success');
+}
+
+function isValidEmail(email) {
+  const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+  return emailRegex.test(email);
+}
+
+function showNotification(message, type = 'info') {
+  // Create notification element
+  const notification = document.createElement('div');
+  notification.className = `notification notification-${type}`;
+  notification.textContent = message;
+  
+  // Style the notification
+  notification.style.cssText = `
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    background: ${type === 'success' ? '#28a745' : '#17a2b8'};
+    color: white;
+    padding: 12px 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+    z-index: 10000;
+    font-weight: 500;
+    animation: slideIn 0.3s ease-out;
+  `;
+  
+  // Add animation keyframes
+  if (!document.getElementById('notification-styles')) {
+    const style = document.createElement('style');
+    style.id = 'notification-styles';
+    style.textContent = `
+      @keyframes slideIn {
+        from { transform: translateX(100%); opacity: 0; }
+        to { transform: translateX(0); opacity: 1; }
+      }
+      @keyframes slideOut {
+        from { transform: translateX(0); opacity: 1; }
+        to { transform: translateX(100%); opacity: 0; }
+      }
+    `;
+    document.head.appendChild(style);
+  }
+  
+  // Add to page
+  document.body.appendChild(notification);
+  
+  // Remove after 3 seconds
+  setTimeout(() => {
+    notification.style.animation = 'slideOut 0.3s ease-in';
+    setTimeout(() => {
+      if (notification.parentNode) {
+        notification.parentNode.removeChild(notification);
+      }
+    }, 300);
+  }, 3000);
+}
+
+// Add event listener for Enter key on email input
+document.addEventListener('DOMContentLoaded', function() {
+  const emailInput = document.getElementById('invite-email');
+  if (emailInput) {
+    emailInput.addEventListener('keypress', function(e) {
+      if (e.key === 'Enter') {
+        sendEmailInvite();
+      }
+    });
+  }
+});
