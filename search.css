@@ -1,0 +1,49 @@
+.search-container {
+  display: flex;
+  align-items: center;
+  background-color: #2c2c2c;
+  border-radius: 25px;
+  padding: 10px 20px;
+  margin-right: 20px;
+}
+
+.search-icon {
+  color: #ffffff;
+  margin-right: 10px;
+  font-size: 25px;
+}
+
+.search-input {
+  background: none;
+  border: none;
+  color: #ffffff;
+  font-size: 25px;
+  outline: none;
+  width: 150px; /* Adjust as needed */
+  margin-left: 10px;
+}
+
+.search-input::placeholder {
+  color: #b0b0b0;
+}
+
+.shortcut-keys {
+  display: flex;
+  align-items: center;
+  gap: 8px; /* spacing between keys */
+}
+
+.shortcut-key {
+  background: linear-gradient(180deg, #44486a, #2d2f48);
+  color: #cfd3e6;
+  font-size: 16px;
+  padding: 6px 12px;
+  border-radius: 8px;
+  font-weight: 600;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  text-align: center;
+  min-width: 28px;
+
+  box-shadow: 0 3px 4px rgba(0, 0, 0, 0.7),
+    /* bottom shadow */ inset 0 1px 2px rgba(255, 255, 255, 0.15); /* top inner glow */
+}
