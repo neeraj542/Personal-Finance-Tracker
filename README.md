@@ -14,6 +14,20 @@ Personal Finance Tracker is a web application that helps you manage your finance
 - Customizable currency settings
 - Secure data protection
 
+## Getting Started
+
+To get a local copy up and running, follow these simple steps.
+
+1. Clone the repo
+   ```sh
+   git clone https://github.com/neeraj542/Personal-Finance-Tracker.git
+   ```
+2. Navigate to the project directory
+   ```sh
+   cd Personal-Finance-Tracker
+   ```
+3. Open `index.html` in your favorite browser.
+
 ## Technologies Used
 
 - HTML
