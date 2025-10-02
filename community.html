@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link
+      rel="icon"
+      type="image/x-icon"
+      href="./favicon_io/android-chrome-512x512.png"
+      sizes="64x64"
+    />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="community.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/feather-icons/dist/feather.min.css"
+    />
+    <script src="https://unpkg.com/feather-icons"></script>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+    />
+    <title>Community - Personal Finance Tracker</title>
+  </head>
+
+  <body>
+    <!-- Navigation -->
+    <nav>
+      <div class="navbar">
+        <a href="index.html" class="logo"
+          ><i class="fas fa-chart-line"></i> Finance Tracker</a
+        >
+        <ul class="nav-links">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="index.html#tracker">Use Tracker</a></li>
+          <li><a href="index.html#how-it-works">How it works</a></li>
+          <li><a href="#" class="active">Community</a></li>
+          <li><a href="./support.html">Support</a></li>
+        </ul>
+        <div class="buttons">
+          <a href="./login.html" class="btn-head"
+            ><i class="fas fa-sign-in-alt"></i> Log In</a
+          >
+          <a href="./sign-up.html" class="btn-head"
+            ><i class="fas fa-user-plus"></i> Sign Up</a>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="community-hero">
+      <div class="hero-content">
+        <h1>Join Our Finance Community</h1>
+        <p>Share ideas, ask questions, and help others with their financial journey</p>
+        <div class="hero-stats">
+          <div class="stat">
+            <span class="stat-number" id="total-posts">127</span>
+            <span class="stat-label">Discussions</span>
+          </div>
+          <div class="stat">
+            <span class="stat-number" id="total-members">2.4k</span>
+            <span class="stat-label">Members</span>
+          </div>
+          <div class="stat">
+            <span class="stat-number" id="solved-topics">89%</span>
+            <span class="stat-label">Solved</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Main Community Content -->
+    <section class="community-main">
+      <div class="community-container">
+        
+        <!-- Community Controls -->
+        <div class="community-controls">
+          <div class="controls-left">
+            <div class="search-bar">
+              <i class="fas fa-search"></i>
+              <input 
+                type="text" 
+                id="search-input" 
+                placeholder="Search discussions..." 
+                onkeyup="filterPosts()"
+              />
+              <button class="clear-search" onclick="clearSearch()" style="display: none;">
+                <i class="fas fa-times"></i>
+              </button>
+            </div>
+            
+            <div class="filter-tabs">
+              <button class="filter-tab active" data-filter="all" onclick="filterByCategory('all')">
+                <i class="fas fa-th-large"></i> All
+              </button>
+              <button class="filter-tab" data-filter="feature-request" onclick="filterByCategory('feature-request')">
+                <i class="fas fa-lightbulb"></i> Feature Requests
+              </button>
+              <button class="filter-tab" data-filter="bug" onclick="filterByCategory('bug')">
+                <i class="fas fa-bug"></i> Bug Reports
+              </button>
+              <button class="filter-tab" data-filter="general" onclick="filterByCategory('general')">
+                <i class="fas fa-comments"></i> General
+              </button>
+              <button class="filter-tab" data-filter="help" onclick="filterByCategory('help')">
+                <i class="fas fa-question-circle"></i> Help
+              </button>
+            </div>
+          </div>
+          
+          <div class="controls-right">
+            <div class="sort-options">
+              <select id="sort-select" onchange="sortPosts()">
+                <option value="latest">Latest</option>
+                <option value="popular">Most Popular</option>
+                <option value="most-commented">Most Commented</option>
+                <option value="solved">Solved First</option>
+              </select>
+            </div>
+            
+            <button class="new-post-btn" onclick="showNewPostModal()">
+              <i class="fas fa-plus"></i> New Discussion
+            </button>
+          </div>
+        </div>
+
+        <!-- Posts Container -->
+        <div class="posts-container" id="posts-container">
+          <!-- Posts will be dynamically loaded here -->
+        </div>
+
+        <!-- Load More Button -->
+        <div class="load-more-container">
+          <button class="load-more-btn" id="load-more-btn" onclick="loadMorePosts()">
+            <i class="fas fa-chevron-down"></i> Load More Discussions
+          </button>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- New Post Modal -->
+    <div class="modal-overlay" id="new-post-modal" style="display: none;">
+      <div class="modal">
+        <div class="modal-header">
+          <h3>Start a New Discussion</h3>
+          <button class="modal-close" onclick="hideNewPostModal()">
+            <i class="fas fa-times"></i>
+          </button>
+        </div>
+        
+        <div class="modal-body">
+          <form id="new-post-form" onsubmit="submitNewPost(event)">
+            <div class="form-group">
+              <label for="post-title">Title *</label>
+              <input 
+                type="text" 
+                id="post-title" 
+                placeholder="Brief, descriptive title for your discussion"
+                required
+                maxlength="100"
+              />
+              <span class="char-count">0/100</span>
+            </div>
+            
+            <div class="form-group">
+              <label for="post-category">Category *</label>
+              <select id="post-category" required>
+                <option value="">Select a category</option>
+                <option value="feature-request">Feature Request</option>
+                <option value="bug">Bug Report</option>
+                <option value="general">General Discussion</option>
+                <option value="help">Help & Support</option>
+              </select>
+            </div>
+            
+            <div class="form-group">
+              <label for="post-content">Description *</label>
+              <textarea 
+                id="post-content" 
+                placeholder="Provide details about your discussion topic..."
+                required
+                rows="6"
+                maxlength="2000"
+              ></textarea>
+              <span class="char-count">0/2000</span>
+            </div>
+            
+            <div class="form-group">
+              <label class="checkbox-label">
+                <input type="checkbox" id="urgent-checkbox" />
+                <span class="checkmark"></span>
+                Mark as urgent
+              </label>
+            </div>
+            
+            <div class="form-actions">
+              <button type="button" class="btn-secondary" onclick="hideNewPostModal()">
+                Cancel
+              </button>
+              <button type="submit" class="btn-primary">
+                <i class="fas fa-paper-plane"></i> Post Discussion
+              </button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+
+    <!-- User Authentication Modal -->
+    <div class="modal-overlay" id="auth-modal" style="display: none;">
+      <div class="modal">
+        <div class="modal-header">
+          <h3>Sign In Required</h3>
+          <button class="modal-close" onclick="hideAuthModal()">
+            <i class="fas fa-times"></i>
+          </button>
+        </div>
+        
+        <div class="modal-body">
+          <div class="auth-message">
+            <i class="fas fa-lock" style="font-size: 3rem; color: #0b0081; margin-bottom: 1rem;"></i>
+            <p>You need to sign in to participate in community discussions.</p>
+            <p>Join thousands of users managing their finances better!</p>
+          </div>
+          
+          <div class="auth-actions">
+            <a href="./login.html" class="btn-primary">
+              <i class="fas fa-sign-in-alt"></i> Sign In
+            </a>
+            <a href="./sign-up.html" class="btn-secondary">
+              <i class="fas fa-user-plus"></i> Create Account
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Toast Notifications Container -->
+    <div class="toast-container" id="toast-container"></div>
+
+    <footer>
+      <div class="footer">
+        <p>Created by Neeraj Meena, Full Stack MERN Developer</p>
+      </div>
+    </footer>
+
+    <script>
+      feather.replace();
+    </script>
+    <script src="script.js"></script>
+    <script src="community.js"></script>
+  </body>
+</html>
