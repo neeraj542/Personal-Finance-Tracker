@@ -16,12 +16,15 @@ form {
     max-width: 300px;
     /* margin: 0 auto; */
     padding: 20px;
-    background-color: #f2f2f2;
+    
+    /* background-color: #f2f2f2; */
+     background: rgba(255, 255, 255, 0.1);
     border-radius: 4px;
   }
   
   .login-form h2 {
     text-align: center;
+    color: #fff;
   }
   
   .form-group {
@@ -32,8 +35,12 @@ form {
     display: block;
     font-weight: bold;
     margin-bottom: 5px;
+    color: #fff;
   }
-  
+ 
+  .form-group a {
+    color: #fff;
+  }
   input[type="text"],
   input[type="password"] {
     width: 100%;
@@ -45,14 +52,9 @@ form {
   button {
     width: 100%;
     padding: 10px;
-    background-color: #f44336;
     color: #fff;
+    background-color: rgba(255, 255, 255, 0.1);
     border: none;
     border-radius: 4px;
     cursor: pointer;
   }
-  
-  button:hover {
-    background-color: rgb(255, 0, 0);
-  }
-  
