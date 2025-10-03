@@ -10,6 +10,59 @@
   overflow: hidden;
 }
 
+/* Theme: Dark overrides for sign-up page */
+.theme-dark .signup-hero {
+  background: linear-gradient(135deg, #0b0b12 0%, #111827 50%, #0b0b12 100%);
+}
+
+.theme-dark .floating-card {
+  background: rgba(17, 24, 39, 0.7);
+  border-color: rgba(255, 255, 255, 0.1);
+  color: #e5e7eb;
+}
+
+.theme-dark .signup-container {
+  background: #0b0b12;
+}
+
+.theme-dark .modern-signup-form {
+  background: #0f172a;
+  border: 1px solid #1f2937;
+}
+
+.theme-dark .form-group label {
+  color: #cbd5e1;
+}
+
+.theme-dark .form-group input {
+  background: #0b0f1a;
+  color: #e5e7eb;
+  border-color: #1f2937;
+}
+
+.theme-dark .signup-divider::before {
+  background: #1f2937;
+}
+
+.theme-dark .signup-divider span {
+  background: #0f172a;
+  color: #94a3b8;
+}
+
+.theme-dark .social-btn {
+  background: #0b0f1a;
+  border-color: #1f2937;
+  color: #e5e7eb;
+}
+
+.theme-dark .signup-footer {
+  color: #94a3b8;
+}
+
+.theme-dark .signup-footer a {
+  color: #93c5fd;
+}
+
 .signup-hero::before {
   content: '';
   position: absolute;

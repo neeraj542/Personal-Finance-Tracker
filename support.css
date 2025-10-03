@@ -369,6 +369,97 @@
   text-decoration: underline;
 }
 
+/* Theme: Dark overrides for support page */
+.theme-dark .signup-form {
+    background-color: #0f172a;
+    border: 1px solid #1f2937;
+    color: #e5e7eb;
+}
+
+.theme-dark label {
+    color: #cbd5e1;
+}
+
+.theme-dark input[type="text"], .theme-dark input[type="email"], .theme-dark #query {
+    background-color: #0b0f1a;
+    border-color: #1f2937;
+    color: #e5e7eb;
+}
+
+.theme-dark button {
+    background-color: #1f2937;
+}
+
+.signup-form {
+    display: grid;
+    /* text-align: justify; */
+    align-self: center;
+    max-width: 500px;
+    /* margin: 0 auto; */
+    padding: 20px;
+    background-color: #f2f2f2;
+    border-radius: 4px;
+}
+
+/* Additional dark theme overrides for support page components */
+.theme-dark .support-hero {
+  background: linear-gradient(135deg, #0b0b12 0%, #111827 50%, #0b0b12 100%);
+}
+
+.theme-dark .floating-card {
+  background: rgba(17, 24, 39, 0.7);
+  border-color: rgba(255, 255, 255, 0.15);
+  color: #e5e7eb;
+}
+
+.theme-dark .support-container {
+  background: linear-gradient(135deg, #0f172a 0%, #0b0f1a 100%);
+}
+
+.theme-dark .modern-support-form {
+  background: #0f172a;
+  border: 1px solid #1f2937;
+}
+
+.theme-dark .support-form-header h2 {
+  color: #e5e7eb;
+}
+
+.theme-dark .support-form-header p {
+  color: #94a3b8;
+}
+
+.theme-dark .form-group label {
+  color: #cbd5e1;
+}
+
+.theme-dark .form-group input,
+.theme-dark .form-group select,
+.theme-dark .form-group textarea {
+  background: #0b0f1a;
+  color: #e5e7eb;
+  border-color: #1f2937;
+}
+
+.theme-dark .form-group input::placeholder,
+.theme-dark .form-group textarea::placeholder {
+  color: #94a3b8;
+}
+
+.theme-dark .checkmark {
+  border-color: #334155;
+}
+
+.theme-dark .checkbox-label { color: #94a3b8; }
+
+.theme-dark .support-footer {
+  background: rgba(148, 163, 184, 0.08);
+}
+
+.theme-dark .support-footer p { color: #cbd5e1; }
+
+.theme-dark .support-footer a { color: #93c5fd; }
+
 /* Animations */
 @keyframes gradientShift {
   0% { background-position: 0% 50%; }

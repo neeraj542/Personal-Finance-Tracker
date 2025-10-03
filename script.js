@@ -6,7 +6,7 @@
 //   targetElement.scrollIntoView({ behavior: 'smooth' });
 // });
 
-// Get the table-part element and the transaction-table
+// Get the table-part element and the transaction-table (may not exist on all pages)
 const tablePart = document.querySelector(".table-part");
 const transactionTable = document.getElementById("transaction-table");
 
@@ -23,13 +23,55 @@ function checkTableScroll() {
 }
 
 // Call the function initially and whenever there is a change in the table
-checkTableScroll();
+if (transactionTable && tablePart) {
+  checkTableScroll();
+  // Add an event listener for changes in the table
+  const observer = new MutationObserver(checkTableScroll);
+  observer.observe(transactionTable, {
+    childList: true,
+    subtree: true,
+  });
+}
 
-// Add an event listener for changes in the table
-const observer = new MutationObserver(checkTableScroll);
-observer.observe(transactionTable, {
-  childList: true,
-  subtree: true,
+// ---------------------- THEME TOGGLER ----------------------
+document.addEventListener('DOMContentLoaded', function () {
+  const root = document.documentElement;
+  const body = document.body;
+  const toggleBtn = document.getElementById('theme-toggle');
+  const storedTheme = localStorage.getItem('ft-theme');
+
+  function applyTheme(theme) {
+    if (theme === 'dark') {
+      root.classList.add('theme-dark');
+      if (body) body.classList.add('theme-dark');
+    } else {
+      root.classList.remove('theme-dark');
+      if (body) body.classList.remove('theme-dark');
+    }
+    // Update icon if present
+    if (toggleBtn) {
+      const icon = toggleBtn.querySelector('i');
+      if (icon) {
+        icon.className = theme === 'dark' ? 'fas fa-sun' : 'fas fa-moon';
+      }
+    }
+  }
+
+  // Apply stored theme or system preference
+  if (storedTheme === 'dark' || storedTheme === 'light') {
+    applyTheme(storedTheme);
+  } else if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
+    applyTheme('dark');
+  }
+
+  if (toggleBtn) {
+    toggleBtn.addEventListener('click', function () {
+      const currentlyDark = root.classList.contains('theme-dark') || body.classList.contains('theme-dark');
+      const theme = currentlyDark ? 'light' : 'dark';
+      localStorage.setItem('ft-theme', theme);
+      applyTheme(theme);
+    });
+  }
 });
 
 // Initialize an empty array to store the transactions
@@ -204,14 +246,19 @@ function updateBalance() {
 window.addEventListener("DOMContentLoaded", () => {
   // Set initial balance value
   let balance = 0.0;
-  updateBalance(balance); // Update the balance display
+  const balanceEl = document.getElementById("balance");
+  if (balanceEl) {
+    updateBalance(balance); // Update the balance display
+  }
 
   // Other code for adding transactions, updating balance, etc.
 
   // Function to update the balance display
   function updateBalance(balance) {
     const balanceElement = document.getElementById("balance");
-    balanceElement.textContent = balance.toFixed(2); // Format balance with 2 decimal places
+    if (balanceElement) {
+      balanceElement.textContent = balance.toFixed(2); // Format balance with 2 decimal places
+    }
   }
 });
 // Function to format currency based on the selected currency code
@@ -303,19 +350,25 @@ function updateTransactionTable() {
   });
 }
 
-// Event listener for the Add Transaction button
-document
-  .getElementById("add-transaction-btn")
-  .addEventListener("click", addTransaction);
+// Event listener for the Add Transaction button (index page only)
+const addBtn = document.getElementById("add-transaction-btn");
+if (addBtn) {
+  addBtn.addEventListener("click", addTransaction);
+}
 
-// Event listener for the Save Transaction button
-document
-  .getElementById("save-transaction-btn")
-  .addEventListener("click", saveTransaction);
+// Event listener for the Save Transaction button (index page only)
+const saveBtn = document.getElementById("save-transaction-btn");
+if (saveBtn) {
+  saveBtn.addEventListener("click", saveTransaction);
+}
 
-// Initial update of the balance and transaction table
-updateBalance();
-updateTransactionTable();
+// Initial update of the balance and transaction table (index page only)
+if (document.getElementById("balance")) {
+  updateBalance();
+}
+if (transactionTable) {
+  updateTransactionTable();
+}
 
 // Function to handle the download of data in PDF and CSV formats
 function handleDownload() {
