@@ -3,7 +3,7 @@
 
 <head>
   <meta charset="UTF-8">
-  <link rel="icon" type="image/x-icon" href="./favicon_io/android-chrome-512x512.png" sizes="64x64">
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMzIiIGhlaWdodD0iMzIiIHZpZXdCb3g9IjAgMCAzMiAzMiIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPHJlY3Qgd2lkdGg9IjMyIiBoZWlnaHQ9IjMyIiByeD0iNCIgZmlsbD0iIzBmMDA4MSIvPgo8Y2lyY2xlIGN4PSIxNiIgY3k9IjE2IiByPSIxMiIgZmlsbD0iI2ZmOGMwMCIgc3Ryb2tlPSIjZmZmZmZmIiBzdHJva2Utd2lkdGg9IjIiLz4KPHBhdGggZD0iTTEwIDEySDIyVjE4SDEwVjEyWiIgZmlsbD0iI2ZmZmZmZiIvPgo8Y2lyY2xlIGN4PSIxNiIgY3k9IjE0IiByPSIxLjUiIGZpbGw9IiMwZjAwODEiLz4KPHBhdGggZD0iTTE0IDI0QzE0IDI2LjIwOTEgMTUuNzkwOSAyOCAxOCAyOEMyMC4yMDkxIDI4IDIyIDI2LjIwOTEgMjIgMjQiIHN0cm9rZT0iI2ZmZmZmZiIgc3Ryb2tlLXdpZHRoPSIyIiBzdHJva2UtbGluZWNhcD0icm91bmQiLz4KPC9zdmc+">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="style.css">
   <link rel="stylesheet" href="./login.css">
@@ -17,20 +17,37 @@
   <!-- <header class="header-part"> -->
     <nav>
       <div class="navbar">
-        <a href="#" class="logo"><i class="fas fa-chart-line"></i> Finance Tracker</a>
+        <a href="./index.html" class="logo"><i class="fas fa-chart-line"></i> Finance Tracker</a>
         <ul class="nav-links">
-          <li><a href="./index.html">Home</a></li>
-          <!-- <li><a href="">Use Tracker</a></li> -->
-          <!-- <li><a href="#how-it-works">How it works</a></li>
-          <li><a href="#">Support</a></li> -->
+          <li><a href="./index.html" class="active">Home</a></li>
+          <li><a href="./index.html#tracker">Use Tracker</a></li>
+          <li><a href="./index.html#how-it-works">How it Works</a></li>
+          <li><a href="./index.html#invite">Community</a></li>
+          <li><a href="./support.html">Support</a></li>
         </ul>
+        
+        <!-- Search Bar -->
+        <div class="search-container">
+          <div class="search-bar">
+            <i class="fas fa-search search-icon"></i>
+            <input type="text" id="search-input" placeholder="Search" class="search-input">
+            <div class="search-shortcut">
+              <span class="shortcut-key">⌘</span>
+              <span class="shortcut-key">K</span>
+              <span class="shortcut-separator">/</span>
+              <span class="shortcut-key">Ctrl</span>
+              <span class="shortcut-key">K</span>
+            </div>
+          </div>
+        </div>
+        
         <div class="buttons">
-          
+          <a href="./login.html" class="btn-head"><i class="fas fa-sign-in-alt"></i> Log In</a>
           <a href="./sign-up.html" class="btn-head"><i class="fas fa-user-plus"></i> Sign Up</a>
         </div>
-        <!-- <div class="menu-toggle">
+        <div class="menu-toggle" id="menu-toggle">
             <i class="fas fa-bars"></i>
-        </div> -->
+        </div>
       </div>
     </nav>
 
@@ -62,7 +79,7 @@
             <p>Get insights into your spending</p>
           </div>
           <div class="floating-card">
-            <i class="fas fa-target"></i>
+            <i class="fas fa-bullseye"></i>
             <h3>Goal Tracking</h3>
             <p>Monitor your financial goals</p>
           </div>
@@ -103,9 +120,6 @@
             </label>
           </div>
           
-          <div class="form-group forgot-password">
-            <a href="/forgot-password">Forgot your password?</a>
-          </div>
           
           <button type="submit" class="login-btn">
             <i class="fas fa-sign-in-alt"></i>
@@ -127,9 +141,10 @@
             </button>
           </div>
           
-          <div class="login-footer">
-            <p>Don't have an account? <a href="./sign-up.html">Sign up here</a></p>
-          </div>
+        <div class="login-footer">
+          <p>Don't have an account? <a href="./sign-up.html">Sign up here</a></p>
+          <p><a href="./forgot-password.html">Forgot your password?</a></p>
+        </div>
         </form>
       </div>
     </div>

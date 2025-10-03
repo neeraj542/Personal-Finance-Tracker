@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Favicon Generator</title>
+</head>
+<body>
+    <canvas id="favicon" width="32" height="32" style="border: 1px solid #ccc;"></canvas>
+    <script>
+        const canvas = document.getElementById('favicon');
+        const ctx = canvas.getContext('2d');
+        
+        // Background
+        ctx.fillStyle = '#0b0081';
+        ctx.fillRect(0, 0, 32, 32);
+        
+        // Piggy bank body
+        ctx.fillStyle = '#ff8c00';
+        ctx.beginPath();
+        ctx.arc(16, 16, 12, 0, 2 * Math.PI);
+        ctx.fill();
+        
+        // Border
+        ctx.strokeStyle = '#ffffff';
+        ctx.lineWidth = 2;
+        ctx.stroke();
+        
+        // Coin slot
+        ctx.fillStyle = '#ffffff';
+        ctx.fillRect(10, 12, 12, 6);
+        
+        // Eye
+        ctx.fillStyle = '#0b0081';
+        ctx.beginPath();
+        ctx.arc(16, 14, 1.5, 0, 2 * Math.PI);
+        ctx.fill();
+        
+        // Legs
+        ctx.strokeStyle = '#ffffff';
+        ctx.lineWidth = 2;
+        ctx.beginPath();
+        ctx.moveTo(14, 24);
+        ctx.quadraticCurveTo(16, 26, 18, 24);
+        ctx.stroke();
+        
+        // Convert to data URL
+        const dataURL = canvas.toDataURL('image/png');
+        console.log('Favicon data URL:', dataURL);
+        
+        // Create download link
+        const link = document.createElement('a');
+        link.download = 'money-favicon.ico';
+        link.href = dataURL;
+        link.textContent = 'Download Favicon';
+        document.body.appendChild(link);
+    </script>
+</body>
+</html>
