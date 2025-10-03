@@ -214,6 +214,18 @@ window.addEventListener("DOMContentLoaded", () => {
     balanceElement.textContent = balance.toFixed(2); // Format balance with 2 decimal places
   }
 });
+
+// Add keyboard shortcut for search (Cmd+K or Ctrl+K)
+document.addEventListener("keydown", (event) => {
+  const searchInput = document.getElementById("search-input");
+  if (searchInput) {
+    if ((event.metaKey || event.ctrlKey) && event.key === "k") {
+      event.preventDefault();
+      searchInput.focus();
+    }
+  }
+});
+
 // Function to format currency based on the selected currency code
 function formatCurrency(amount, currencyCode) {
   // Define currency symbols and decimal separators for different currency codes
@@ -402,55 +414,69 @@ function exportToCSV() {
 
 // Invite Section Functions
 function sendEmailInvite() {
-  const emailInput = document.getElementById('invite-email');
+  const emailInput = document.getElementById("invite-email");
   const email = emailInput.value.trim();
-  
+
   if (!email) {
-    alert('Please enter an email address');
+    alert("Please enter an email address");
     return;
   }
-  
+
   if (!isValidEmail(email)) {
-    alert('Please enter a valid email address');
+    alert("Please enter a valid email address");
     return;
   }
-  
+
   // Create mailto link with pre-filled subject and body
-  const subject = 'Join our Personal Finance Tracker community!';
+  const subject = "Join our Personal Finance Tracker community!";
   const body = `Hi! I've been using this amazing Personal Finance Tracker app to manage my finances and I thought you might find it useful too. It helps you track income, expenses, and manage your budget effectively. Check it out: ${window.location.href}`;
-  
-  const mailtoLink = `mailto:${email}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
-  
+
+  const mailtoLink = `mailto:${email}?subject=${encodeURIComponent(
+    subject
+  )}&body=${encodeURIComponent(body)}`;
+
   // Open the default email client
   window.location.href = mailtoLink;
-  
+
   // Clear the input
-  emailInput.value = '';
-  
+  emailInput.value = "";
+
   // Show success message
-  showNotification('Community invite sent!', 'success');
+  showNotification("Community invite sent!", "success");
 }
 
 function shareOnLinkedIn() {
   const url = encodeURIComponent(window.location.href);
-  const text = encodeURIComponent('Join our Personal Finance Tracker community! Track your finances effortlessly.');
+  const text = encodeURIComponent(
+    "Join our Personal Finance Tracker community! Track your finances effortlessly."
+  );
   const linkedinUrl = `https://www.linkedin.com/sharing/share-offsite/?url=${url}`;
-  
+
   // Open LinkedIn share dialog in a new window
-  window.open(linkedinUrl, 'linkedin-share', 'width=600,height=400,scrollbars=yes,resizable=yes');
-  
-  showNotification('LinkedIn share opened!', 'success');
+  window.open(
+    linkedinUrl,
+    "linkedin-share",
+    "width=600,height=400,scrollbars=yes,resizable=yes"
+  );
+
+  showNotification("LinkedIn share opened!", "success");
 }
 
 function shareOnTwitter() {
   const url = encodeURIComponent(window.location.href);
-  const text = encodeURIComponent('Join our Personal Finance Tracker community! Track your finances effortlessly.');
+  const text = encodeURIComponent(
+    "Join our Personal Finance Tracker community! Track your finances effortlessly."
+  );
   const twitterUrl = `https://twitter.com/intent/tweet?url=${url}&text=${text}`;
-  
+
   // Open Twitter share dialog in a new window
-  window.open(twitterUrl, 'twitter-share', 'width=600,height=400,scrollbars=yes,resizable=yes');
-  
-  showNotification('Community share opened!', 'success');
+  window.open(
+    twitterUrl,
+    "twitter-share",
+    "width=600,height=400,scrollbars=yes,resizable=yes"
+  );
+
+  showNotification("Community share opened!", "success");
 }
 
 function isValidEmail(email) {
@@ -458,18 +484,18 @@ function isValidEmail(email) {
   return emailRegex.test(email);
 }
 
-function showNotification(message, type = 'info') {
+function showNotification(message, type = "info") {
   // Create notification element
-  const notification = document.createElement('div');
+  const notification = document.createElement("div");
   notification.className = `notification notification-${type}`;
   notification.textContent = message;
-  
+
   // Style the notification
   notification.style.cssText = `
     position: fixed;
     top: 20px;
     right: 20px;
-    background: ${type === 'success' ? '#28a745' : '#17a2b8'};
+    background: ${type === "success" ? "#28a745" : "#17a2b8"};
     color: white;
     padding: 12px 20px;
     border-radius: 8px;
@@ -478,11 +504,11 @@ function showNotification(message, type = 'info') {
     font-weight: 500;
     animation: slideIn 0.3s ease-out;
   `;
-  
+
   // Add animation keyframes
-  if (!document.getElementById('notification-styles')) {
-    const style = document.createElement('style');
-    style.id = 'notification-styles';
+  if (!document.getElementById("notification-styles")) {
+    const style = document.createElement("style");
+    style.id = "notification-styles";
     style.textContent = `
       @keyframes slideIn {
         from { transform: translateX(100%); opacity: 0; }
@@ -495,13 +521,13 @@ function showNotification(message, type = 'info') {
     `;
     document.head.appendChild(style);
   }
-  
+
   // Add to page
   document.body.appendChild(notification);
-  
+
   // Remove after 3 seconds
   setTimeout(() => {
-    notification.style.animation = 'slideOut 0.3s ease-in';
+    notification.style.animation = "slideOut 0.3s ease-in";
     setTimeout(() => {
       if (notification.parentNode) {
         notification.parentNode.removeChild(notification);
@@ -511,11 +537,11 @@ function showNotification(message, type = 'info') {
 }
 
 // Add event listener for Enter key on email input
-document.addEventListener('DOMContentLoaded', function() {
-  const emailInput = document.getElementById('invite-email');
+document.addEventListener("DOMContentLoaded", function () {
+  const emailInput = document.getElementById("invite-email");
   if (emailInput) {
-    emailInput.addEventListener('keypress', function(e) {
-      if (e.key === 'Enter') {
+    emailInput.addEventListener("keypress", function (e) {
+      if (e.key === "Enter") {
         sendEmailInvite();
       }
     });

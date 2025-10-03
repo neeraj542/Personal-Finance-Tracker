@@ -10,6 +10,7 @@
     />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="search.css" />
     <link
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/feather-icons/dist/feather.min.css"
@@ -39,13 +40,26 @@
           <li><a href="#invite">Community</a></li>
           <li><a href="./support.html">Support</a></li>
         </ul>
+        <div class="search-container">
+          <i class="fas fa-search search-icon"></i>
+          <input
+            type="text"
+            class="search-input"
+            id="search-input"
+            placeholder="Search"
+          />
+          <div class="shortcut-keys">
+            <span class="shortcut-key">⌘</span>
+            <span class="shortcut-key">K</span>
+          </div>
+        </div>
         <div class="buttons">
           <a href="./login.html" class="btn-head"
             ><i class="fas fa-sign-in-alt"></i> Log In</a
           >
           <a href="./sign-up.html" class="btn-head"
-            ><i class="fas fa-user-plus"></i> Sign Up</a>
-          
+            ><i class="fas fa-user-plus"></i> Sign Up</a
+          >
         </div>
         <!-- <div class="menu-toggle">
             <i class="fas fa-bars"></i>
@@ -190,26 +204,26 @@
         <div class="under-head-text"></div>
       </div>
       <br />
-      
+
       <div class="invite-container">
         <div class="invite-card">
           <div class="invite-header">
             <h2>Join our community</h2>
           </div>
-          
+
           <div class="invite-content">
             <div class="email-invite">
-              <input 
-                type="email" 
-                id="invite-email" 
-                placeholder="Enter an email address" 
+              <input
+                type="email"
+                id="invite-email"
+                placeholder="Enter an email address"
                 class="email-input"
               />
               <button onclick="sendEmailInvite()" class="send-invite-btn">
                 Send invite
               </button>
             </div>
-            
+
             <div class="social-share">
               <button onclick="shareOnLinkedIn()" class="linkedin-share-btn">
                 <i class="fab fa-linkedin-in"></i> Share
