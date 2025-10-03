@@ -818,8 +818,10 @@ footer::before {
 .footer-bottom {
   border-top: 1px solid rgba(255, 255, 255, 0.1);
   padding: 30px 0;
-  background: rgba(0, 0, 0, 0.1);
-  width: 100%;
+  background: rgba(0, 0, 0, 0.2);
+  width: 100vw;
+  margin-left: calc(-50vw + 50%);
+  position: relative;
 }
 
 .footer-bottom-content {
@@ -831,7 +833,9 @@ footer::before {
   width: 100%;
   max-width: 1200px;
   margin: 0 auto;
-  padding: 0 20px;
+  padding: 0 40px;
+  position: relative;
+  z-index: 1;
 }
 
 .footer-bottom p {
@@ -1016,6 +1020,7 @@ footer::before {
     flex-direction: column;
     text-align: center;
     gap: 15px;
+    padding: 0 20px;
   }
   
   .social-links {
