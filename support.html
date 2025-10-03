@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <link rel="icon" type="image/x-icon" href="./favicon_io/android-chrome-512x512.png" sizes="64x64">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
   <link rel="stylesheet" href="style.css">
   <link rel="stylesheet" href="support.css">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/feather-icons/dist/feather.min.css">
@@ -16,15 +16,31 @@
   <!-- <header class="header-part"> -->
     <nav>
       <div class="navbar">
-        <a href="#" class="logo"
+        <a href="./index.html" class="logo"
           ><i class="fas fa-chart-line"></i> Finance Tracker</a
         >
         <ul class="nav-links">
-          <li><a href="#">Home</a></li>
-          <li><a href="#tracker">Use Tracker</a></li>
-          <li><a href="#how-it-works">How it works</a></li>
+          <li><a href="./index.html">Home</a></li>
+          <li><a href="./index.html#tracker">Use Tracker</a></li>
+          <li><a href="./index.html#how-it-works">How it works</a></li>
+          <li><a href="./index.html#invite">Community</a></li>
           <li><a href="./support.html">Support</a></li>
         </ul>
+        
+        <!-- Search Bar -->
+        <div class="search-container">
+          <div class="search-bar">
+            <i class="fas fa-search search-icon"></i>
+            <input type="text" id="search-input" placeholder="Search" class="search-input">
+            <div class="search-shortcut">
+              <span class="shortcut-key">⌘</span>
+              <span class="shortcut-key">K</span>
+              <span class="shortcut-separator">/</span>
+              <span class="shortcut-key">Ctrl</span>
+              <span class="shortcut-key">K</span>
+            </div>
+          </div>
+        </div>
         <div class="buttons">
           <a href="./login.html" class="btn-head"
             ><i class="fas fa-sign-in-alt"></i> Log In</a
@@ -63,12 +79,61 @@
     </div>
 
 <footer>
-  <div class="footer">
-    <ul>
-      <li><a href="#">Privacy Policy</a></li>
-      <li><a href="#">Terms of Service</a></li>
-      <li><a href="#">Contact Us</a></li>
-    </ul>
+  <div class="footer-container">
+    <div class="footer-content">
+      <div class="footer-section">
+        <div class="footer-logo">
+          <i class="fas fa-chart-line"></i>
+          <h3>Finance Tracker</h3>
+        </div>
+        <p class="footer-description">
+          Take control of your finances with our comprehensive personal finance tracking tool. 
+          Manage your income, expenses, and financial goals effortlessly.
+        </p>
+        <div class="social-links">
+          <a href="#" class="social-link"><i class="fab fa-github"></i></a>
+          <a href="#" class="social-link"><i class="fab fa-linkedin"></i></a>
+          <a href="#" class="social-link"><i class="fab fa-twitter"></i></a>
+          <a href="#" class="social-link"><i class="fab fa-facebook"></i></a>
+        </div>
+      </div>
+      
+      <div class="footer-section">
+        <h4>Quick Links</h4>
+        <ul class="footer-links">
+          <li><a href="./index.html#tracker">Use Tracker</a></li>
+          <li><a href="./index.html#how-it-works">How it Works</a></li>
+          <li><a href="./index.html#invite">Community</a></li>
+          <li><a href="./support.html">Support</a></li>
+        </ul>
+      </div>
+      
+      <div class="footer-section">
+        <h4>Resources</h4>
+        <ul class="footer-links">
+          <li><a href="#">Privacy Policy</a></li>
+          <li><a href="#">Terms of Service</a></li>
+          <li><a href="#">Contact Us</a></li>
+          <li><a href="#">Help Center</a></li>
+        </ul>
+      </div>
+      
+      <div class="footer-section">
+        <h4>Contact Info</h4>
+        <div class="contact-info">
+          <p><i class="fas fa-envelope"></i> support@financetracker.com</p>
+          <p><i class="fas fa-phone"></i> +1 (555) 123-4567</p>
+          <p><i class="fas fa-map-marker-alt"></i> New York, NY</p>
+        </div>
+      </div>
+    </div>
+    
+    <div class="footer-bottom">
+      <div class="footer-bottom-content">
+        <p>&copy; 2025 Finance Tracker. All rights reserved.</p>
+        <p class="developer-credit">Created by <strong>Neeraj Meena</strong> - Full Stack MERN Developer</p>
+      </div>
+    </div>
   </div>
 </footer>
 <script>feather.replace();</script>

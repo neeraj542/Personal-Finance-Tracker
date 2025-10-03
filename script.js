@@ -521,3 +521,196 @@ document.addEventListener('DOMContentLoaded', function() {
     });
   }
 });
+
+// Search Bar Functionality
+document.addEventListener('DOMContentLoaded', function() {
+  const searchInput = document.getElementById('search-input');
+  
+  if (searchInput) {
+    // Focus search bar on Cmd+K, Ctrl+K, or Ctrl+Shift+K
+    document.addEventListener('keydown', function(e) {
+      // Check for Cmd+K (Mac), Ctrl+K, or Ctrl+Shift+K (Windows/Linux)
+      if ((e.metaKey || e.ctrlKey) && e.key === 'k' && !e.shiftKey) {
+        e.preventDefault();
+        e.stopPropagation();
+        e.stopImmediatePropagation();
+        
+        // Focus the search input
+        searchInput.focus();
+        searchInput.select(); // Select all text for easy replacement
+        
+        // Show a brief visual feedback
+        searchInput.style.borderColor = '#0b0081';
+        setTimeout(() => {
+          searchInput.style.borderColor = '';
+        }, 1000);
+        
+        return false;
+      }
+      
+      // Alternative: Ctrl+Shift+K (won't conflict with browser)
+      if (e.ctrlKey && e.shiftKey && e.key === 'K') {
+        e.preventDefault();
+        e.stopPropagation();
+        e.stopImmediatePropagation();
+        
+        // Focus the search input
+        searchInput.focus();
+        searchInput.select();
+        
+        // Show a brief visual feedback
+        searchInput.style.borderColor = '#0b0081';
+        setTimeout(() => {
+          searchInput.style.borderColor = '';
+        }, 1000);
+        
+        return false;
+      }
+    }, true); // Use capture phase to intercept before browser default
+    
+    // Handle search functionality
+    searchInput.addEventListener('input', function(e) {
+      const query = e.target.value.toLowerCase().trim();
+      console.log('Input event triggered:', query); // Debug log
+      
+      if (query.length > 2) { // Only search if at least 3 characters
+        performSearch(query);
+      } else if (query.length === 0) {
+        // Clear highlights when search is empty
+        const previousHighlights = document.querySelectorAll('.search-highlight');
+        previousHighlights.forEach(el => {
+          el.classList.remove('search-highlight');
+        });
+      }
+    });
+    
+    // Handle Enter key in search
+    searchInput.addEventListener('keypress', function(e) {
+      if (e.key === 'Enter') {
+        const query = e.target.value.toLowerCase().trim();
+        if (query.length > 0) {
+          performSearch(query);
+        }
+      }
+    });
+  }
+});
+
+// Search functionality
+function performSearch(query) {
+  console.log('Searching for:', query);
+  
+  // Clear previous highlights
+  const previousHighlights = document.querySelectorAll('.search-highlight');
+  previousHighlights.forEach(el => {
+    el.classList.remove('search-highlight');
+  });
+  
+  // Get all text elements that can be searched
+  const searchableElements = document.querySelectorAll('h1, h2, h3, h4, h5, h6, p, span, div, a, li, td, th');
+  let foundResults = false;
+  let resultCount = 0;
+  let firstResult = null;
+  
+  searchableElements.forEach(element => {
+    const text = element.textContent.toLowerCase();
+    if (text.includes(query)) {
+      // Highlight the element
+      element.classList.add('search-highlight');
+      foundResults = true;
+      resultCount++;
+      
+      // Store the first result for scrolling
+      if (!firstResult) {
+        firstResult = element;
+      }
+    }
+  });
+  
+  if (foundResults) {
+    console.log(`Found ${resultCount} results for:`, query);
+    showSearchNotification(`Found ${resultCount} results for "${query}"`, 'success');
+    
+    // Scroll to first result
+    if (firstResult) {
+      setTimeout(() => {
+        firstResult.scrollIntoView({ 
+          behavior: 'smooth', 
+          block: 'center',
+          inline: 'nearest'
+        });
+      }, 300);
+    }
+  } else {
+    console.log('No results found for:', query);
+    showSearchNotification(`No results found for "${query}"`, 'info');
+  }
+}
+
+// Scroll to first search result
+function scrollToFirstResult() {
+  const firstResult = document.querySelector('.search-highlight');
+  if (firstResult) {
+    firstResult.scrollIntoView({ behavior: 'smooth', block: 'center' });
+  }
+}
+
+// Show search notification
+function showSearchNotification(message, type = 'info') {
+  // Create notification element
+  const notification = document.createElement('div');
+  notification.className = `search-notification search-notification-${type}`;
+  notification.textContent = message;
+  
+  // Style the notification
+  notification.style.cssText = `
+    position: fixed;
+    top: 80px;
+    right: 20px;
+    background: ${type === 'success' ? '#28a745' : '#17a2b8'};
+    color: white;
+    padding: 12px 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+    z-index: 10000;
+    font-weight: 500;
+    animation: slideInSearch 0.3s ease-out;
+    max-width: 300px;
+  `;
+  
+  // Add animation keyframes for search notifications
+  if (!document.getElementById('search-notification-styles')) {
+    const style = document.createElement('style');
+    style.id = 'search-notification-styles';
+    style.textContent = `
+      @keyframes slideInSearch {
+        from { transform: translateX(100%); opacity: 0; }
+        to { transform: translateX(0); opacity: 1; }
+      }
+      @keyframes slideOutSearch {
+        from { transform: translateX(0); opacity: 1; }
+        to { transform: translateX(100%); opacity: 0; }
+      }
+      .search-highlight {
+        background-color: #f4ff61 !important;
+        color: #0b0081 !important;
+        padding: 2px 4px;
+        border-radius: 3px;
+      }
+    `;
+    document.head.appendChild(style);
+  }
+  
+  // Add to page
+  document.body.appendChild(notification);
+  
+  // Remove after 3 seconds
+  setTimeout(() => {
+    notification.style.animation = 'slideOutSearch 0.3s ease-in';
+    setTimeout(() => {
+      if (notification.parentNode) {
+        notification.parentNode.removeChild(notification);
+      }
+    }, 300);
+  }, 3000);
+}
