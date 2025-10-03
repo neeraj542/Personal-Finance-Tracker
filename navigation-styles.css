@@ -1,0 +1,276 @@
+/* Enhanced Navigation Styles */
+
+/* Active Navigation State */
+.nav-links a.active {
+  color: #0b0081;
+  font-weight: 600;
+  background: rgba(11, 0, 129, 0.1);
+  border-radius: 8px;
+  padding: 8px 12px;
+  position: relative;
+}
+
+.nav-links a.active::after {
+  content: '';
+  position: absolute;
+  bottom: -2px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 20px;
+  height: 2px;
+  background: #0b0081;
+  border-radius: 1px;
+}
+
+/* Mobile Menu Toggle */
+.menu-toggle {
+  display: none;
+  flex-direction: column;
+  cursor: pointer;
+  padding: 8px;
+  border-radius: 4px;
+  transition: all 0.3s ease;
+}
+
+.menu-toggle:hover {
+  background: rgba(11, 0, 129, 0.1);
+}
+
+.menu-toggle i {
+  font-size: 20px;
+  color: #0b0081;
+}
+
+/* Mobile Navigation */
+@media (max-width: 768px) {
+  .menu-toggle {
+    display: flex;
+  }
+  
+  .nav-links {
+    position: fixed;
+    top: 60px;
+    left: -100%;
+    width: 100%;
+    height: calc(100vh - 60px);
+    background: rgba(242, 244, 249, 0.98);
+    backdrop-filter: blur(20px);
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    padding: 40px 20px;
+    gap: 30px;
+    transition: left 0.3s ease;
+    z-index: 99;
+  }
+  
+  .nav-links.active {
+    left: 0;
+  }
+  
+  .nav-links li {
+    width: 100%;
+    text-align: center;
+  }
+  
+  .nav-links a {
+    font-size: 18px;
+    padding: 15px 20px;
+    width: 100%;
+    border-radius: 8px;
+  }
+  
+  .nav-links a:hover {
+    background: rgba(11, 0, 129, 0.1);
+    transform: none;
+  }
+  
+  .search-container, .buttons {
+    display: none;
+  }
+}
+
+/* Search Highlight Styles */
+.search-highlight {
+  background-color: #ff8c00 !important;
+  color: #0b0081 !important;
+  padding: 2px 4px;
+  border-radius: 3px;
+  box-shadow: 0 0 0 2px #ff8c00;
+  animation: searchPulse 0.5s ease-in-out;
+}
+
+@keyframes searchPulse {
+  0% { transform: scale(1); }
+  50% { transform: scale(1.05); }
+  100% { transform: scale(1); }
+}
+
+/* Search focus effect */
+.search-focus {
+  animation: searchFocus 2s ease-in-out;
+  transform: scale(1.02);
+  box-shadow: 0 0 0 4px rgba(255, 140, 0, 0.3) !important;
+}
+
+@keyframes searchFocus {
+  0% { transform: scale(1); }
+  50% { transform: scale(1.05); }
+  100% { transform: scale(1.02); }
+}
+
+/* Search Notification Styles */
+.search-notification {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  background: linear-gradient(135deg, #0b0081 0%, #1a1a8a 100%);
+  color: white;
+  padding: 15px 20px;
+  border-radius: 12px;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
+  z-index: 1000;
+  animation: slideInRight 0.3s ease-out;
+  max-width: 350px;
+}
+
+.search-notification.error {
+  background: linear-gradient(135deg, #dc3545 0%, #c82333 100%);
+}
+
+.search-notification.success {
+  background: linear-gradient(135deg, #28a745 0%, #20c997 100%);
+}
+
+.notification-content {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.notification-content i {
+  font-size: 16px;
+}
+
+.close-notification {
+  background: none;
+  border: none;
+  color: white;
+  font-size: 18px;
+  cursor: pointer;
+  margin-left: auto;
+  padding: 0;
+  width: 20px;
+  height: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  transition: background 0.2s ease;
+}
+
+.close-notification:hover {
+  background: rgba(255, 255, 255, 0.2);
+}
+
+@keyframes slideInRight {
+  from {
+    transform: translateX(100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+/* Page Transition Effects */
+.page-transition {
+  opacity: 0.8;
+  transition: opacity 0.3s ease;
+}
+
+/* Keyboard Navigation Enhancement */
+.keyboard-navigation *:focus {
+  outline: 2px solid #0b0081 !important;
+  outline-offset: 2px !important;
+}
+
+/* Smooth Scroll Behavior */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Enhanced Button Hover Effects */
+.nav-links a {
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.nav-links a:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(11, 0, 129, 0.2);
+}
+
+/* Loading States */
+.loading {
+  position: relative;
+  overflow: hidden;
+}
+
+.loading::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+  animation: shimmer 1.5s infinite;
+}
+
+@keyframes shimmer {
+  0% { left: -100%; }
+  100% { left: 100%; }
+}
+
+/* Accessibility Improvements */
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+  
+  html {
+    scroll-behavior: auto;
+  }
+}
+
+/* High contrast mode support */
+@media (prefers-contrast: high) {
+  .nav-links a {
+    border: 1px solid currentColor;
+  }
+  
+  .search-highlight {
+    border: 2px solid #000;
+  }
+}
+
+/* Focus visible for better keyboard navigation */
+.focus-visible {
+  outline: 2px solid #0b0081;
+  outline-offset: 2px;
+}
+
+/* Better touch targets for mobile */
+@media (max-width: 768px) {
+  .nav-links a,
+  .menu-toggle {
+    min-height: 44px;
+    min-width: 44px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+}
