@@ -129,7 +129,7 @@
 .signup-form-wrapper {
   max-width: 600px;
   margin: 0 auto;
-  padding: 0 20px;
+  padding: 10px 20px;
 }
 
 .signup-form-header {
@@ -444,6 +444,77 @@
   .modern-signup-form {
     padding: 20px 15px;
   }
+
+/* Dark Mode Styles for Signup Page */
+.theme-dark .signup-hero {
+  background: linear-gradient(135deg, #0b0b12 0%, #111827 50%, #0b0b12 100%) !important;
+}
+
+.theme-dark .signup-hero-text h1 {
+  color: #ffffff !important;
+}
+
+.theme-dark .signup-hero-text p {
+  color: #d1d5db !important;
+}
+
+.theme-dark .signup-benefits {
+  background: rgba(17, 24, 39, 0.8) !important;
+  border: 1px solid #374151 !important;
+}
+
+/* .theme-dark .benefit-item {
+  background: rgba(31, 41, 55, 0.6) !important;
+  color: #ffffff !important;
+} */
+.theme-dark .benefit-item i {
+  color: #60a5fa !important;
+}
+
+.theme-dark .floating-card {
+  background: rgba(17, 24, 39, 0.8) !important;
+  border: 1px solid #374151 !important;
+  color: #ffffff !important;
+}
+
+/* .theme-dark .modern-signup-form {
+  background: rgba(17, 24, 39, 0.95) !important;
+  border: 1px solid #374151 !important;
+} */
+
+.theme-dark .form-group label {
+  color: #ffffff !important;
+}
+
+.theme-dark .form-group input,
+.theme-dark .form-group select {
+  background: rgba(31, 41, 55, 0.8) !important;
+  border: 1px solid #4b5563 !important;
+  color: #ffffff !important;
+}
+
+.theme-dark .form-group input:focus,
+.theme-dark .form-group select:focus {
+  border-color: #3b82f6 !important;
+  box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.1) !important;
+}
+
+.theme-dark .form-group input::placeholder {
+  color: #9ca3af !important;
+}
+
+.theme-dark .checkbox-label {
+  color: #ffffff !important;
+}
+
+.theme-dark .signup-btn {
+  background: linear-gradient(135deg, #3b82f6 0%, #1d4ed8 100%) !important;
+  color: #ffffff !important;
+}
+
+.theme-dark .signup-btn:hover {
+  background: linear-gradient(135deg, #2563eb 0%, #1e40af 100%) !important;
+}
   
   .signup-form-header h2 {
     font-size: 1.8rem;
