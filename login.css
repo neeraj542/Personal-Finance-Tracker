@@ -439,6 +439,87 @@
   .modern-login-form {
     padding: 20px 15px;
   }
+
+/* Dark Mode Styles for Login Page */
+.theme-dark .login-hero {
+  background: linear-gradient(135deg, #0b0b12 0%, #111827 50%, #0b0b12 100%) !important;
+}
+
+.theme-dark .login-hero-text h1 {
+  color: #ffffff !important;
+}
+
+.theme-dark .login-hero-text p {
+  color: #d1d5db !important;
+}
+
+.theme-dark .login-benefits {
+  background: rgba(17, 24, 39, 0.8) !important;
+  border: 1px solid #374151 !important;
+}
+
+.theme-dark .benefit-item {
+  background: rgba(31, 41, 55, 0.6) !important;
+  border: 1px solid #4b5563 !important;
+  color: #ffffff !important;
+}
+
+.theme-dark .benefit-item i {
+  color: #60a5fa !important;
+}
+
+.theme-dark .floating-card {
+  background: rgba(17, 24, 39, 0.8) !important;
+  border: 1px solid #374151 !important;
+  color: #ffffff !important;
+}
+
+.theme-dark .modern-login-form {
+  background: rgba(17, 24, 39, 0.95) !important;
+  border: 1px solid #374151 !important;
+  background-color: rgba(17, 24, 39, 0.95) !important;
+}
+
+/* Force dark background on all form elements */
+.theme-dark .modern-login-form * {
+  background-color: transparent !important;
+}
+
+.theme-dark .login-container {
+  background: linear-gradient(135deg, #0b0b12 0%, #111827 100%) !important;
+}
+
+.theme-dark .form-group label {
+  color: #ffffff !important;
+}
+
+.theme-dark .form-group input {
+  background: rgba(31, 41, 55, 0.8) !important;
+  border: 1px solid #4b5563 !important;
+  color: #ffffff !important;
+}
+
+.theme-dark .form-group input:focus {
+  border-color: #3b82f6 !important;
+  box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.1) !important;
+}
+
+.theme-dark .form-group input::placeholder {
+  color: #9ca3af !important;
+}
+
+.theme-dark .checkbox-label {
+  color: #ffffff !important;
+}
+
+.theme-dark .login-btn {
+  background: linear-gradient(135deg, #3b82f6 0%, #1d4ed8 100%) !important;
+  color: #ffffff !important;
+}
+
+.theme-dark .login-btn:hover {
+  background: linear-gradient(135deg, #2563eb 0%, #1e40af 100%) !important;
+}
   
   .login-form-header h2 {
     font-size: 1.8rem;

@@ -2514,3 +2514,396 @@ input:focus:valid, select:focus:valid, textarea:focus:valid {
   50% { transform: scale(1.02); }
   100% { transform: scale(1); }
 }
+
+/* ====================== DARK MODE STYLES ====================== */
+/* Dark Theme Styles - Clean Implementation */
+.theme-dark body {
+  background-color: #0b0b12;
+  color: #e5e7eb;
+}
+
+.theme-dark nav {
+  background-color: #0f172a; /* slate-900 */
+  border-bottom: 1px solid #1f2937; /* gray-800 */
+}
+
+.theme-dark .logo {
+  color: #60a5fa; /* brighter blue for better visibility */
+}
+
+.theme-dark .nav-links a {
+  color: #e2e8f0; /* lighter gray for better contrast */
+}
+
+.theme-dark .nav-links a:hover {
+  color: #60a5fa; /* brighter blue on hover */
+}
+
+.theme-dark .nav-links a.active {
+  color: #3b82f6; /* bright blue for active state */
+  font-weight: 600;
+}
+
+.theme-dark .btn-head {
+  background-color: #1f2937;
+  color: #e5e7eb;
+  border: 1px solid #374151;
+}
+
+.theme-dark .btn-head:hover {
+  background-color: #374151;
+  color: #ffffff;
+}
+
+.theme-dark .section-box {
+  background-color: #0b0b12;
+}
+
+.theme-dark .under-welcome-h1,
+.theme-dark .head-text,
+.theme-dark .working-content {
+  color: #ffffff;
+}
+
+.theme-dark .tracker-part {
+  background-color: rgba(17, 24, 39, 0.8);
+  border: 1px solid #374151;
+}
+
+.theme-dark .tracker-balance {
+  color: #0446cc;
+}
+
+.theme-dark table {
+  background-color: rgba(17, 24, 39, 0.6);
+  border: 1px solid #374151;
+}
+
+.theme-dark th {
+  background-color: #1f2937;
+  color: #ffffff;
+  border-bottom: 1px solid #374151;
+}
+
+.theme-dark td {
+  color: #e5e7eb;
+  border-bottom: 1px solid #374151;
+}
+
+.theme-dark #currency,
+.theme-dark #date,
+.theme-dark .transaction-form input[type="text"],
+.theme-dark .transaction-form input[type="number"],
+.theme-dark .transaction-form select,
+.theme-dark .email-input {
+  background-color: rgba(31, 41, 55, 0.8);
+  border: 1px solid #4b5563;
+  color: #ffffff;
+}
+
+.theme-dark .search-bar {
+  background-color: rgba(31, 41, 55, 0.8);
+  border: 1px solid #4b5563;
+}
+
+.theme-dark .search-input::placeholder {
+  color: #9ca3af;
+}
+
+.theme-dark .invite-section {
+  background-color: #0b0b12;
+}
+
+.theme-dark .invite-card {
+  background-color: rgba(17, 24, 39, 0.8);
+  border: 1px solid #374151;
+}
+
+.theme-dark .invite-header {
+  color: #1a4cee;
+}
+
+.theme-dark .footer-bottom {
+  background-color: #0b0b12;
+}
+
+.theme-dark .social-link {
+  color: #9ca3af;
+}
+
+.theme-dark .search-highlight {
+  background-color: #f4ff61 !important;
+  color: #0b0081 !important;
+  padding: 2px 4px;
+  border-radius: 3px;
+}
+
+.theme-dark footer {
+  background: linear-gradient(135deg, #0b0b12 0%, #111827 100%) !important;
+  width: 100% !important;
+  margin: 0 !important;
+  padding: 0 !important;
+}
+
+.theme-dark .footer-section h4 {
+  color: #ffffff;
+}
+
+.theme-dark .footer-description {
+  color: #d1d5db;
+}
+
+.theme-dark .footer-links a {
+  color: #9ca3af;
+}
+
+.theme-dark .footer-bottom p {
+  color: #9ca3af;
+}
+
+/* Fix blue bars on footer sides */
+.theme-dark body {
+  background-color: #0b0b12 !important;
+}
+
+.theme-dark .footer-container {
+  background: linear-gradient(135deg, #0b0b12 0%, #111827 100%) !important;
+  width: 100% !important;
+  max-width: none !important;
+}
+
+.theme-dark .footer-content {
+  background: transparent !important;
+}
+
+.theme-dark footer::before {
+  display: none !important;
+}
+
+/* Ensure no blue elements bleed through */
+.theme-dark .footer-container * {
+  background-color: transparent !important;
+}
+
+.theme-dark .footer-section {
+  background: transparent !important;
+}
+
+/* Support Page Dark Mode Styles */
+.theme-dark .support-hero {
+  background: linear-gradient(135deg, #0b0b12 0%, #111827 50%, #0b0b12 100%);
+}
+
+.theme-dark .support-hero-content h1 {
+  color: #ffffff;
+}
+
+.theme-dark .support-hero-content p {
+  color: #d1d5db;
+}
+
+.theme-dark .support-benefits {
+  background: rgba(17, 24, 39, 0.8);
+  border: 1px solid #374151;
+}
+
+.theme-dark .benefit-item {
+  background: rgba(31, 41, 55, 0.6);
+  border: 1px solid #4b5563;
+  color: #ffffff;
+}
+
+.theme-dark .benefit-item i {
+  color: #60a5fa;
+}
+
+.theme-dark .floating-card {
+  background: rgba(17, 24, 39, 0.8);
+  border: 1px solid #374151;
+}
+
+.theme-dark .support-container {
+  background: linear-gradient(135deg, #0b0b12 0%, #111827 50%, #0b0b12 100%);
+}
+
+.theme-dark .support-form-wrapper {
+  background: rgba(17, 24, 39, 0.95);
+  border: 1px solid #374151;
+}
+
+.theme-dark .support-form-header h2 {
+  color: #ffffff;
+}
+
+.theme-dark .support-form-header p {
+  color: #d1d5db;
+}
+
+.theme-dark .modern-support-form {
+  background: rgba(17, 24, 39, 0.8);
+  border: 1px solid #374151;
+}
+
+.theme-dark .form-group label {
+  color: #ffffff;
+}
+
+.theme-dark .form-group input,
+.theme-dark .form-group textarea,
+.theme-dark .form-group select {
+  background: rgba(31, 41, 55, 0.8);
+  border: 1px solid #4b5563;
+  color: #ffffff;
+}
+
+.theme-dark .form-group input:focus,
+.theme-dark .form-group textarea:focus,
+.theme-dark .form-group select:focus {
+  border-color: #3b82f6;
+  box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.1);
+}
+
+.theme-dark .form-group input::placeholder,
+.theme-dark .form-group textarea::placeholder {
+  color: #9ca3af;
+}
+
+.theme-dark .support-btn {
+  background: linear-gradient(135deg, #3b82f6 0%, #1d4ed8 100%);
+  color: #ffffff;
+}
+
+.theme-dark .support-btn:hover {
+  background: linear-gradient(135deg, #2563eb 0%, #1e40af 100%);
+}
+
+/* Additional Support Page Dark Mode Fixes */
+.theme-dark .checkbox-group {
+  color: #ffffff;
+}
+
+.theme-dark .checkbox-label {
+  color: #ffffff;
+}
+
+.theme-dark .checkbox-label a {
+  color: #60a5fa;
+}
+
+.theme-dark .checkbox-label a:hover {
+  color: #3b82f6;
+}
+
+.theme-dark .support-footer {
+  background: rgba(17, 24, 39, 0.8);
+  border: 1px solid #374151;
+}
+
+.theme-dark .support-footer p {
+  color: #d1d5db;
+}
+
+.theme-dark .support-footer a {
+  color: #60a5fa;
+}
+
+.theme-dark .support-footer a:hover {
+  color: #3b82f6;
+}
+
+/* Login and Signup Page Dark Mode Styles */
+.theme-dark .login-hero,
+.theme-dark .signup-hero {
+  background: linear-gradient(135deg, #0b0b12 0%, #111827 50%, #0b0b12 100%) !important;
+}
+
+.theme-dark .login-hero-text h1,
+.theme-dark .signup-hero-text h1 {
+  color: #ffffff !important;
+}
+
+.theme-dark .login-hero-text p,
+.theme-dark .signup-hero-text p {
+  color: #d1d5db !important;
+}
+
+.theme-dark .login-benefits,
+.theme-dark .signup-benefits {
+  background: rgba(17, 24, 39, 0.8) !important;
+  border: 1px solid #374151 !important;
+}
+
+.theme-dark .modern-login-form,
+.theme-dark .modern-signup-form {
+  background: rgba(17, 24, 39, 0.95) !important;
+  border: 1px solid #374151 !important;
+  background-color: rgba(17, 24, 39, 0.95) !important;
+}
+
+/* Force dark backgrounds on all form containers */
+.theme-dark .login-container,
+.theme-dark .signup-container {
+  background: linear-gradient(135deg, #0b0b12 0%, #111827 100%) !important;
+}
+
+/* Override any white backgrounds */
+.theme-dark .modern-login-form *,
+.theme-dark .modern-signup-form * {
+  background-color: transparent !important;
+}
+
+/* Force body and html to be dark */
+.theme-dark body,
+.theme-dark html {
+  background-color: #0b0b12 !important;
+  background: #0b0b12 !important;
+}
+
+/* Nuclear option - override any remaining white backgrounds */
+.theme-dark [class*="form"],
+.theme-dark [class*="login"],
+.theme-dark [class*="signup"] {
+  background-color: rgba(17, 24, 39, 0.95) !important;
+  background: rgba(17, 24, 39, 0.95) !important;
+}
+
+.theme-dark [class*="container"] {
+  background-color: #0b0b12 !important;
+  background: #0b0b12 !important;
+}
+
+.theme-dark .form-group label {
+  color: #ffffff !important;
+}
+
+.theme-dark .form-group input,
+.theme-dark .form-group select {
+  background: rgba(31, 41, 55, 0.8) !important;
+  border: 1px solid #4b5563 !important;
+  color: #ffffff !important;
+}
+
+.theme-dark .form-group input:focus,
+.theme-dark .form-group select:focus {
+  border-color: #3b82f6 !important;
+  box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.1) !important;
+}
+
+.theme-dark .form-group input::placeholder {
+  color: #9ca3af !important;
+}
+
+.theme-dark .checkbox-label {
+  color: #ffffff !important;
+}
+
+.theme-dark .login-btn,
+.theme-dark .signup-btn {
+  background: linear-gradient(135deg, #3b82f6 0%, #1d4ed8 100%) !important;
+  color: #ffffff !important;
+}
+
+.theme-dark .login-btn:hover,
+.theme-dark .signup-btn:hover {
+  background: linear-gradient(135deg, #2563eb 0%, #1e40af 100%) !important;
+}
