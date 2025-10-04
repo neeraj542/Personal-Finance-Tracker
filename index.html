@@ -2,13 +2,10 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <link
-      rel="icon"
-      type="image/x-icon"
-      href="./favicon_io/android-chrome-512x512.png"
-      sizes="64x64"
-    />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMzIiIGhlaWdodD0iMzIiIHZpZXdCb3g9IjAgMCAzMiAzMiIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPHJlY3Qgd2lkdGg9IjMyIiBoZWlnaHQ9IjMyIiByeD0iNCIgZmlsbD0iIzBmMDA4MSIvPgo8Y2lyY2xlIGN4PSIxNiIgY3k9IjE2IiByPSIxMiIgZmlsbD0iI2ZmOGMwMCIgc3Ryb2tlPSIjZmZmZmZmIiBzdHJva2Utd2lkdGg9IjIiLz4KPHBhdGggZD0iTTEwIDEySDIyVjE4SDEwVjEyWiIgZmlsbD0iI2ZmZmZmZiIvPgo8Y2lyY2xlIGN4PSIxNiIgY3k9IjE0IiByPSIxLjUiIGZpbGw9IiMwZjAwODEiLz4KPHBhdGggZD0iTTE0IDI0QzE0IDI2LjIwOTEgMTUuNzkwOSAyOCAxOCAyOEMyMC4yMDkxIDI4IDIyIDI2LjIwOTEgMjIgMjQiIHN0cm9rZT0iI2ZmZmZmZiIgc3Ryb2tlLXdpZHRoPSIyIiBzdHJva2UtbGluZWNhcD0icm91bmQiLz4KPC9zdmc+">
+    <link rel="icon" type="image/png" sizes="32x32" href="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMzIiIGhlaWdodD0iMzIiIHZpZXdCb3g9IjAgMCAzMiAzMiIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPHJlY3Qgd2lkdGg9IjMyIiBoZWlnaHQ9IjMyIiByeD0iNCIgZmlsbD0iIzBmMDA4MSIvPgo8Y2lyY2xlIGN4PSIxNiIgY3k9IjE2IiByPSIxMiIgZmlsbD0iI2ZmOGMwMCIgc3Ryb2tlPSIjZmZmZmZmIiBzdHJva2Utd2lkdGg9IjIiLz4KPHBhdGggZD0iTTEwIDEySDIyVjE4SDEwVjEyWiIgZmlsbD0iI2ZmZmZmZiIvPgo8Y2lyY2xlIGN4PSIxNiIgY3k9IjE0IiByPSIxLjUiIGZpbGw9IiMwZjAwODEiLz4KPHBhdGggZD0iTTE0IDI0QzE0IDI2LjIwOTEgMTUuNzkwOSAyOCAxOCAyOEMyMC4yMDkxIDI4IDIyIDI2LjIwOTEgMjIgMjQiIHN0cm9rZT0iI2ZmZmZmZiIgc3Ryb2tlLXdpZHRoPSIyIiBzdHJva2UtbGluZWNhcD0icm91bmQiLz4KPC9zdmc+">
+    <link rel="icon" type="image/png" sizes="16x16" href="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTYiIGhlaWdodD0iMTYiIHZpZXdCb3g9IjAgMCAxNiAxNiIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPHJlY3Qgd2lkdGg9IjE2IiBoZWlnaHQ9IjE2IiByeD0iMiIgZmlsbD0iIzBmMDA4MSIvPgo8Y2lyY2xlIGN4PSI4IiBjeT0iOCIgcj0iNiIgZmlsbD0iI2ZmOGMwMCIgc3Ryb2tlPSIjZmZmZmZmIiBzdHJva2Utd2lkdGg9IjEiLz4KPHBhdGggZD0iTTUgNkgxMVY5SDVWNloiIGZpbGw9IiNmZmZmZmYiLz4KPGNpcmNsZSBjeD0iOCIgY3k9IjciIHI9IjAuNSIgZmlsbD0iIzBmMDA4MSIvPgo8cGF0aCBkPSJNNyAxMkM3IDEzLjEwNDYgNy44OTU0MyAxNCA5IDE0QzEwLjEwNDYgMTQgMTEgMTMuMTA0NiAxMSAxMiIgc3Ryb2tlPSIjZmZmZmZmIiBzdHJva2Utd2lkdGg9IjEiIHN0cm9rZS1saW5lY2FwPSJyb3VuZCIvPgo8L3N2Zz4=">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
     <link rel="stylesheet" href="style.css" />
     <link
       rel="stylesheet"
@@ -26,19 +23,37 @@
   </head>
 
   <body>
-    <!-- <header class="header-part"> -->
-    <nav>
+    <!-- Skip to main content for accessibility -->
+    <a href="#main-content" class="skip-link">Skip to main content</a>
+    
+    <nav role="navigation" aria-label="Main navigation">
       <div class="navbar">
         <a href="#" class="logo"
           ><i class="fas fa-chart-line"></i> Finance Tracker</a
         >
         <ul class="nav-links">
-          <li><a href="#">Home</a></li>
+          <li><a href="#" class="active">Home</a></li>
           <li><a href="#tracker">Use Tracker</a></li>
           <li><a href="#how-it-works">How it works</a></li>
           <li><a href="./community.html">Community</a></li>
           <li><a href="./support.html">Support</a></li>
         </ul>
+        
+        <!-- Search Bar -->
+        <div class="search-container">
+          <div class="search-bar">
+            <i class="fas fa-search search-icon" aria-hidden="true"></i>
+            <input type="text" id="search-input" placeholder="Search" class="search-input" aria-label="Search the website" role="searchbox">
+            <div class="search-shortcut" aria-label="Press Ctrl+K or Cmd+K to search">
+              <span class="shortcut-key">⌘</span>
+              <span class="shortcut-key">K</span>
+              <span class="shortcut-separator">/</span>
+              <span class="shortcut-key">Ctrl</span>
+              <span class="shortcut-key">K</span>
+            </div>
+          </div>
+        </div>
+        
         <div class="buttons">
           <a href="./login.html" class="btn-head"
             ><i class="fas fa-sign-in-alt"></i> Log In</a
@@ -47,13 +62,14 @@
             ><i class="fas fa-user-plus"></i> Sign Up</a>
           
         </div>
-        <!-- <div class="menu-toggle">
-            <i class="fas fa-bars"></i>
-        </div> -->
+        <div class="menu-toggle" id="menu-toggle" aria-label="Toggle navigation menu" role="button" tabindex="0">
+            <i class="fas fa-bars" aria-hidden="true"></i>
+        </div>
       </div>
     </nav>
 
     <!-- Landing Page Content -->
+    <main id="main-content" role="main">
     <section class="section-box">
       <div class="main-landing">
         <div class="content">
@@ -63,7 +79,7 @@
             Track your income and expenses effortlessly. Manage your budget, set
             financial goals, and make smarter decisions for more secure future.
           </p>
-          <button class="under-welcome-btn">Sign Up Now</button>
+          <a href="./sign-up.html" class="under-welcome-btn">Sign Up Now</a>
         </div>
         <div class="under-welcome-image">
           <img src="./assets/makeme.png" alt="Power Finance" />
@@ -73,8 +89,6 @@
     <br />
     <div class="arrow">
       <a href="#tracker " class="scroll-link">
-        <!-- <span></span> -->
-        <!-- <span></span> -->
         <span></span>
       </a>
     </div>
@@ -142,7 +156,6 @@
             Experience the power of
             <span class="text-lightBlue">Personal Finance Tracker</span>
           </h5>
-          <!-- <div class="under-h1"></div> -->
           <ul class="ul-items">
             <li class="check-list-items">
               <i data-feather="check" class="feather icon-check"></i>
@@ -169,16 +182,14 @@
               <span>Secure data protection</span>
             </li>
           </ul>
-          <button class="sign-up-button-btn">Sign Up Now</button>
+          <a href="./sign-up.html" class="sign-up-button-btn">Sign Up Now</a>
         </div>
         <div class="right-working-image">
-          <!-- <div class="under-welcome-image"> -->
           <img
             src="./assets/how-it-works.png"
             target="_self"
             alt="Power Finance"
           />
-          <!-- </div> -->
         </div>
       </div>
     </section>
@@ -313,15 +324,64 @@
         </div>
       </div>
     </section>
+    </main>
 
-    <footer>
-      <div class="footer">
-        <!-- <ul>
-        <li><a href="#">Privacy Policy</a></li>
-        <li><a href="#">Terms of Service</a></li>
-        <li><a href="#">Contact Us</a></li>
-      </ul> -->
-        <p>Created by Neeraj Meena, Full Stack MERN Developer</p>
+<footer role="contentinfo">
+      <div class="footer-container">
+        <div class="footer-content">
+          <div class="footer-section">
+            <div class="footer-logo">
+              <i class="fas fa-chart-line"></i>
+              <h3>Finance Tracker</h3>
+            </div>
+            <p class="footer-description">
+              Take control of your finances with our comprehensive personal finance tracking tool. 
+              Manage your income, expenses, and financial goals effortlessly.
+            </p>
+            <div class="social-links">
+              <a href="#" class="social-link"><i class="fab fa-github"></i></a>
+              <a href="#" class="social-link"><i class="fab fa-linkedin"></i></a>
+              <a href="#" class="social-link"><i class="fab fa-twitter"></i></a>
+              <a href="#" class="social-link"><i class="fab fa-facebook"></i></a>
+            </div>
+          </div>
+          
+          <div class="footer-section">
+            <h4>Quick Links</h4>
+            <ul class="footer-links">
+              <li><a href="#tracker">Use Tracker</a></li>
+              <li><a href="#how-it-works">How it Works</a></li>
+              <li><a href="#invite">Community</a></li>
+              <li><a href="./support.html">Support</a></li>
+            </ul>
+          </div>
+          
+          <div class="footer-section">
+            <h4>Resources</h4>
+            <ul class="footer-links">
+              <li><a href="#">Privacy Policy</a></li>
+              <li><a href="#">Terms of Service</a></li>
+              <li><a href="#">Contact Us</a></li>
+              <li><a href="#">Help Center</a></li>
+            </ul>
+          </div>
+          
+          <div class="footer-section">
+            <h4>Contact Info</h4>
+            <div class="contact-info">
+              <p><i class="fas fa-envelope"></i> support@financetracker.com</p>
+              <p><i class="fas fa-phone"></i> +1 (555) 123-4567</p>
+              <p><i class="fas fa-map-marker-alt"></i> New York, NY</p>
+            </div>
+          </div>
+        </div>
+        
+        <div class="footer-bottom">
+          <div class="footer-bottom-content">
+            <p>&copy; 2025 Finance Tracker. All rights reserved.</p>
+            <p class="developer-credit">Created by <strong>Neeraj Meena</strong> - Full Stack MERN Developer</p>
+          </div>
+        </div>
       </div>
     </footer>
     <script>
