@@ -35,7 +35,7 @@
           <li><a href="#" class="active">Home</a></li>
           <li><a href="#tracker">Use Tracker</a></li>
           <li><a href="#how-it-works">How it works</a></li>
-          <li><a href="#invite">Community</a></li>
+          <li><a href="./community.html">Community</a></li>
           <li><a href="./support.html">Support</a></li>
         </ul>
         
@@ -194,40 +194,131 @@
       </div>
     </section>
 
-    <!-- Invite Section -->
-    <section class="invite-section" id="invite">
+    <!-- Enhanced Community Section -->
+    <section class="community-preview-section" id="invite">
       <div class="head-text">
-        <h1>Community Invite</h1>
+        <h1>Join Our Growing Community</h1>
         <div class="under-head-text"></div>
+        <p class="community-subtitle">Connect with thousands of users sharing financial tips, feature requests, and success stories</p>
       </div>
       <br />
       
-      <div class="invite-container">
-        <div class="invite-card">
-          <div class="invite-header">
-            <h2>Join our community</h2>
+      <div class="community-preview-container">
+        <!-- Community Stats -->
+        <div class="community-stats">
+          <div class="stat-card">
+            <div class="stat-icon">
+              <i class="fas fa-users"></i>
+            </div>
+            <div class="stat-info">
+              <span class="stat-number">2.4k+</span>
+              <span class="stat-label">Active Members</span>
+            </div>
           </div>
           
-          <div class="invite-content">
-            <div class="email-invite">
-              <input 
-                type="email" 
-                id="invite-email" 
-                placeholder="Enter an email address" 
-                class="email-input"
-              />
-              <button onclick="sendEmailInvite()" class="send-invite-btn">
-                Send invite
-              </button>
+          <div class="stat-card">
+            <div class="stat-icon">
+              <i class="fas fa-comments"></i>
+            </div>
+            <div class="stat-info">
+              <span class="stat-number">127</span>
+              <span class="stat-label">Discussions</span>
+            </div>
+          </div>
+          
+          <div class="stat-card">
+            <div class="stat-icon">
+              <i class="fas fa-check-circle"></i>
+            </div>
+            <div class="stat-info">
+              <span class="stat-number">89%</span>
+              <span class="stat-label">Issues Resolved</span>
+            </div>
+          </div>
+        </div>
+        
+        <!-- Recent Activity Preview -->
+        <div class="recent-activity">
+          <h3>Recent Community Activity</h3>
+          <div class="activity-list">
+            <div class="activity-item">
+              <div class="activity-avatar">
+                <i class="fas fa-user-circle"></i>
+              </div>
+              <div class="activity-content">
+                <span class="activity-title">Export to Excel Feature Request</span>
+                <span class="activity-meta">Feature Request • 2 hours ago • 5 comments</span>
+              </div>
+              <span class="activity-badge feature-request">Feature</span>
             </div>
             
-            <div class="social-share">
-              <button onclick="shareOnLinkedIn()" class="linkedin-share-btn">
-                <i class="fab fa-linkedin-in"></i> Share
-              </button>
-              <button onclick="shareOnTwitter()" class="twitter-share-btn">
-                <i class="fab fa-twitter"></i> Tweet
-              </button>
+            <div class="activity-item">
+              <div class="activity-avatar">
+                <i class="fas fa-user-circle"></i>
+              </div>
+              <div class="activity-content">
+                <span class="activity-title">How to backup my transaction data?</span>
+                <span class="activity-meta">Help & Support • 4 hours ago • 3 comments</span>
+              </div>
+              <span class="activity-badge help">Help</span>
+            </div>
+            
+            <div class="activity-item">
+              <div class="activity-avatar">
+                <i class="fas fa-user-circle"></i>
+              </div>
+              <div class="activity-content">
+                <span class="activity-title">Budget planning integration ideas</span>
+                <span class="activity-meta">General Discussion • 1 day ago • 8 comments</span>
+              </div>
+              <span class="activity-badge general">General</span>
+            </div>
+          </div>
+        </div>
+        
+        <!-- Call to Action -->
+        <div class="community-cta">
+          <div class="cta-content">
+            <h3>Ready to Join the Conversation?</h3>
+            <p>Share your ideas, get help, and connect with fellow finance enthusiasts</p>
+            <div class="cta-buttons">
+              <a href="./community.html" class="btn-primary-cta">
+                <i class="fas fa-comments"></i> Browse Discussions
+              </a>
+              <a href="./community.html#new-post" class="btn-secondary-cta">
+                <i class="fas fa-plus"></i> Start Discussion
+              </a>
+            </div>
+          </div>
+        </div>
+        
+        <!-- Traditional Invite Options -->
+        <div class="invite-legacy">
+          <h3>Invite Friends</h3>
+          <div class="invite-container">
+            <div class="invite-card">
+              <div class="invite-content">
+                <div class="email-invite">
+                  <input 
+                    type="email" 
+                    id="invite-email" 
+                    placeholder="Enter an email address" 
+                    class="email-input"
+                  />
+                  <button onclick="sendEmailInvite()" class="send-invite-btn">
+                    Send invite
+                  </button>
+                </div>
+                
+                <div class="social-share">
+                  <button onclick="shareOnLinkedIn()" class="linkedin-share-btn">
+                    <i class="fab fa-linkedin-in"></i> Share
+                  </button>
+                  <button onclick="shareOnTwitter()" class="twitter-share-btn">
+                    <i class="fab fa-twitter"></i> Tweet
+                  </button>
+                </div>
+              </div>
             </div>
           </div>
         </div>

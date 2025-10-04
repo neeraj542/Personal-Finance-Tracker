@@ -2147,20 +2147,23 @@ footer::before {
   }
 }
 
+/* Invite Section Title Styling to match existing design */
 .invite-section .head-text h1 {
-  color: #ffffff;
+  color: white;
   font-size: 40px;
   font-weight: bolder;
   margin-bottom: 20px;
 }
 
-.invite-section .under-head-text {
+.invite-section .under-head-text,
+.community-preview-section .under-head-text {
   width: 60px;
   height: 4px;
   background-color: #ff8c00;
   margin: 0 auto 20px auto;
 }
 
+/* Search and Accessibility Enhancements from upstream */
 .search-highlight {
   background-color: #ff8c00 !important;
   color: #0b0081 !important;
@@ -2203,7 +2206,7 @@ footer::before {
     transform: translateX(100%);
   }
 }
-
+ 
 .loading {
   position: relative;
   overflow: hidden;
@@ -2355,12 +2358,13 @@ input:focus:valid, select:focus:valid, textarea:focus:valid {
   box-shadow: 0 0 0 3px rgba(40, 167, 69, 0.2);
 }
 
+/* Enhanced Logo Responsiveness */
 @media (max-width: 1200px) {
   .logo {
     font-size: 22px;
     padding: 7px 11px;
   }
-  
+
   .logo i {
     font-size: 24px;
   }
@@ -2371,7 +2375,7 @@ input:focus:valid, select:focus:valid, textarea:focus:valid {
     font-size: 20px;
     padding: 6px 10px;
   }
-  
+
   .logo i {
     font-size: 22px;
   }
@@ -2382,7 +2386,7 @@ input:focus:valid, select:focus:valid, textarea:focus:valid {
     font-size: 18px;
     padding: 5px 8px;
   }
-  
+
   .logo i {
     font-size: 20px;
   }
@@ -2393,12 +2397,13 @@ input:focus:valid, select:focus:valid, textarea:focus:valid {
     font-size: 16px;
     padding: 4px 6px;
   }
-  
+
   .logo i {
     font-size: 18px;
   }
 }
 
+/* Accessibility Enhancements */
 *:focus {
   outline: 2px solid #0b0081;
   outline-offset: 2px;
@@ -2425,11 +2430,11 @@ input:focus:valid, select:focus:valid, textarea:focus:valid {
   .nav-links a {
     border: 1px solid currentColor;
   }
-  
+
   .btn-head {
     border: 2px solid currentColor;
   }
-  
+
   .search-highlight {
     border: 2px solid #000;
   }
@@ -2441,11 +2446,11 @@ input:focus:valid, select:focus:valid, textarea:focus:valid {
     animation-iteration-count: 1 !important;
     transition-duration: 0.01ms !important;
   }
-  
+
   .floating-card {
     animation: none;
   }
-  
+
   .search-highlight {
     animation: none;
   }
