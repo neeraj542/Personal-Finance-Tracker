@@ -3,7 +3,7 @@
 
 <head>
   <meta charset="UTF-8">
-  <link rel="icon" type="image/x-icon" href="./favicon_io/android-chrome-512x512.png" sizes="64x64">
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMzIiIGhlaWdodD0iMzIiIHZpZXdCb3g9IjAgMCAzMiAzMiIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPHJlY3Qgd2lkdGg9IjMyIiBoZWlnaHQ9IjMyIiByeD0iNCIgZmlsbD0iIzBmMDA4MSIvPgo8Y2lyY2xlIGN4PSIxNiIgY3k9IjE2IiByPSIxMiIgZmlsbD0iI2ZmOGMwMCIgc3Ryb2tlPSIjZmZmZmZmIiBzdHJva2Utd2lkdGg9IjIiLz4KPHBhdGggZD0iTTEwIDEySDIyVjE4SDEwVjEyWiIgZmlsbD0iI2ZmZmZmZiIvPgo8Y2lyY2xlIGN4PSIxNiIgY3k9IjE0IiByPSIxLjUiIGZpbGw9IiMwZjAwODEiLz4KPHBhdGggZD0iTTE0IDI0QzE0IDI2LjIwOTEgMTUuNzkwOSAyOCAxOCAyOEMyMC4yMDkxIDI4IDIyIDI2LjIwOTEgMjIgMjQiIHN0cm9rZT0iI2ZmZmZmZiIgc3Ryb2tlLXdpZHRoPSIyIiBzdHJva2UtbGluZWNhcD0icm91bmQiLz4KPC9zdmc+">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="style.css">
   <link rel="stylesheet" href="./sign-up.css">
@@ -17,61 +17,218 @@
   <!-- <header class="header-part"> -->
     <nav>
       <div class="navbar">
-        <a href="#" class="logo"><i class="fas fa-chart-line"></i> Finance Tracker</a>
+        <a href="./index.html" class="logo"><i class="fas fa-chart-line"></i> Finance Tracker</a>
         <ul class="nav-links">
-          <li><a href="./index.html">Home</a></li>
-          <!-- <li><a href="">Use Tracker</a></li> -->
-          <!-- <li><a href="#how-it-works">How it works</a></li>
-          <li><a href="#">Support</a></li> -->
+          <li><a href="./index.html" class="active">Home</a></li>
+          <li><a href="./index.html#tracker">Use Tracker</a></li>
+          <li><a href="./index.html#how-it-works">How it Works</a></li>
+          <li><a href="./index.html#invite">Community</a></li>
+          <li><a href="./support.html">Support</a></li>
         </ul>
-        <div class="buttons">
-          <a href="https://finance542.netlify.app/" class="btn-head"><i class="fas fa-sign-in-alt"></i> Log In</a>
-          
+        
+        <!-- Search Bar -->
+        <div class="search-container">
+          <div class="search-bar">
+            <i class="fas fa-search search-icon"></i>
+            <input type="text" id="search-input" placeholder="Search" class="search-input">
+            <div class="search-shortcut">
+              <span class="shortcut-key">⌘</span>
+              <span class="shortcut-key">K</span>
+              <span class="shortcut-separator">/</span>
+              <span class="shortcut-key">Ctrl</span>
+              <span class="shortcut-key">K</span>
+            </div>
+          </div>
         </div>
-        <!-- <div class="menu-toggle">
+        
+        <div class="buttons">
+          <a href="./login.html" class="btn-head"><i class="fas fa-sign-in-alt"></i> Log In</a>
+          <a href="./sign-up.html" class="btn-head"><i class="fas fa-user-plus"></i> Sign Up</a>
+        </div>
+        <div class="menu-toggle" id="menu-toggle">
             <i class="fas fa-bars"></i>
-        </div> -->
+        </div>
       </div>
     </nav>
 
-    <div class="container">
-        <form class="signup-form" action="https://finance542.netlify.app/" method="post">
-          <h2>Sign Up</h2>
-          <div class="form-group">
-            <label for="fullname">Full Name <span>*</span></label>
-            <input type="text" id="fullname" name="fullname" required>
+    <!-- Hero Section -->
+    <div class="signup-hero">
+      <div class="signup-hero-content">
+        <div class="signup-hero-text">
+          <h1>Join Finance Tracker</h1>
+          <p>Start your journey to financial freedom with our comprehensive personal finance tracking tool.</p>
+          <div class="signup-benefits">
+            <div class="benefit-item">
+              <i class="fas fa-chart-line"></i>
+              <span>Track Your Finances</span>
+            </div>
+            <div class="benefit-item">
+              <i class="fas fa-shield-alt"></i>
+              <span>Secure & Private</span>
+            </div>
+            <div class="benefit-item">
+              <i class="fas fa-mobile-alt"></i>
+              <span>Access Anywhere</span>
+            </div>
           </div>
-          <div class="form-group">
-            <label for="email">Email Address <span>*</span></label>
-            <input type="email" id="email" name="email" required>
+        </div>
+        <div class="signup-hero-image">
+          <div class="floating-card">
+            <i class="fas fa-wallet"></i>
+            <h3>Smart Budgeting</h3>
+            <p>Manage your money like a pro</p>
           </div>
-          <div class="form-group">
-            <label for="mobile">Mobile Number <span>*</span></label>
-            <input type="tel" id="mobile" name="mobile" required>
+          <div class="floating-card">
+            <i class="fas fa-piggy-bank"></i>
+            <h3>Save More</h3>
+            <p>Reach your financial goals</p>
           </div>
-          <!-- <div class="form-group">
-            <label for="username">Username</label>
-            <input type="text" id="username" name="username" required>
-          </div> -->
-          <div class="form-group">
-            <label for="password">Password </label>
-            <input type="password" id="password" name="password" required>
+        </div>
+      </div>
+    </div>
+
+    <!-- Sign Up Form Section -->
+    <div class="signup-container">
+      <div class="signup-form-wrapper">
+        <div class="signup-form-header">
+          <h2>Create Your Account</h2>
+          <p>Fill in your details to get started</p>
+        </div>
+        
+        <form class="modern-signup-form" action="https://finance542.netlify.app/" method="post">
+          <div class="form-row">
+            <div class="form-group">
+              <label for="fullname">
+                <i class="fas fa-user"></i>
+                Full Name <span>*</span>
+              </label>
+              <input type="text" id="fullname" name="fullname" required placeholder="Enter your full name">
+            </div>
+            <div class="form-group">
+              <label for="email">
+                <i class="fas fa-envelope"></i>
+                Email Address <span>*</span>
+              </label>
+              <input type="email" id="email" name="email" required placeholder="Enter your email">
+            </div>
           </div>
-          <div class="form-group">
-            <label for="confirm-password">Confirm Password <span>*</span></label>
-            <input type="password" id="confirm-password" name="confirm-password" required>
+          
+          <div class="form-row">
+            <div class="form-group">
+              <label for="mobile">
+                <i class="fas fa-phone"></i>
+                Mobile Number <span>*</span>
+              </label>
+              <input type="tel" id="mobile" name="mobile" required placeholder="Enter your mobile number">
+            </div>
+            <div class="form-group">
+              <label for="password">
+                <i class="fas fa-lock"></i>
+                Password <span>*</span>
+              </label>
+              <input type="password" id="password" name="password" required placeholder="Create a strong password">
+            </div>
           </div>
-          <button type="submit">Submit</button>
+          
+          <div class="form-group">
+            <label for="confirm-password">
+              <i class="fas fa-lock"></i>
+              Confirm Password <span>*</span>
+            </label>
+            <input type="password" id="confirm-password" name="confirm-password" required placeholder="Confirm your password">
+          </div>
+          
+          <div class="form-group checkbox-group">
+            <label class="checkbox-label">
+              <input type="checkbox" required>
+              <span class="checkmark"></span>
+              I agree to the <a href="#">Terms of Service</a> and <a href="#">Privacy Policy</a>
+            </label>
+          </div>
+          
+          <button type="submit" class="signup-btn">
+            <i class="fas fa-user-plus"></i>
+            Create Account
+          </button>
+          
+          <div class="signup-divider">
+            <span>or</span>
+          </div>
+          
+          <div class="social-signup">
+            <button type="button" class="social-btn google-btn">
+              <i class="fab fa-google"></i>
+              Sign up with Google
+            </button>
+            <button type="button" class="social-btn facebook-btn">
+              <i class="fab fa-facebook-f"></i>
+              Sign up with Facebook
+            </button>
+          </div>
+          
+          <div class="signup-footer">
+            <p>Already have an account? <a href="./login.html">Sign in here</a></p>
+          </div>
         </form>
       </div>
+    </div>
 
   <footer>
-    <div class="footer">
-      <ul>
-        <li><a href="#">Privacy Policy</a></li>
-        <li><a href="#">Terms of Service</a></li>
-        <li><a href="#">Contact Us</a></li>
-      </ul>
+    <div class="footer-container">
+      <div class="footer-content">
+        <div class="footer-section">
+          <div class="footer-logo">
+            <i class="fas fa-chart-line"></i>
+            <h3>Finance Tracker</h3>
+          </div>
+          <p class="footer-description">
+            Take control of your finances with our comprehensive personal finance tracking tool. 
+            Manage your income, expenses, and financial goals effortlessly.
+          </p>
+          <div class="social-links">
+            <a href="#" class="social-link"><i class="fab fa-github"></i></a>
+            <a href="#" class="social-link"><i class="fab fa-linkedin"></i></a>
+            <a href="#" class="social-link"><i class="fab fa-twitter"></i></a>
+            <a href="#" class="social-link"><i class="fab fa-facebook"></i></a>
+          </div>
+        </div>
+        
+        <div class="footer-section">
+          <h4>Quick Links</h4>
+          <ul class="footer-links">
+            <li><a href="./index.html#tracker">Use Tracker</a></li>
+            <li><a href="./index.html#how-it-works">How it Works</a></li>
+            <li><a href="./index.html#invite">Community</a></li>
+            <li><a href="./support.html">Support</a></li>
+          </ul>
+        </div>
+        
+        <div class="footer-section">
+          <h4>Resources</h4>
+          <ul class="footer-links">
+            <li><a href="#">Privacy Policy</a></li>
+            <li><a href="#">Terms of Service</a></li>
+            <li><a href="#">Contact Us</a></li>
+            <li><a href="#">Help Center</a></li>
+          </ul>
+        </div>
+        
+        <div class="footer-section">
+          <h4>Contact Info</h4>
+          <div class="contact-info">
+            <p><i class="fas fa-envelope"></i> support@financetracker.com</p>
+            <p><i class="fas fa-phone"></i> +1 (555) 123-4567</p>
+            <p><i class="fas fa-map-marker-alt"></i> New York, NY</p>
+          </div>
+        </div>
+      </div>
+      
+      <div class="footer-bottom">
+        <div class="footer-bottom-content">
+          <p>&copy; 2025 Finance Tracker. All rights reserved.</p>
+          <p class="developer-credit">Created by <strong>Neeraj Meena</strong> - Full Stack MERN Developer</p>
+        </div>
+      </div>
     </div>
   </footer>
   <script>feather.replace();</script>

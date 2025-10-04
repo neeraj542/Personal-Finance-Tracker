@@ -2,8 +2,8 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <link rel="icon" type="image/x-icon" href="./favicon_io/android-chrome-512x512.png" sizes="64x64">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMzIiIGhlaWdodD0iMzIiIHZpZXdCb3g9IjAgMCAzMiAzMiIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPHJlY3Qgd2lkdGg9IjMyIiBoZWlnaHQ9IjMyIiByeD0iNCIgZmlsbD0iIzBmMDA4MSIvPgo8Y2lyY2xlIGN4PSIxNiIgY3k9IjE2IiByPSIxMiIgZmlsbD0iI2ZmOGMwMCIgc3Ryb2tlPSIjZmZmZmZmIiBzdHJva2Utd2lkdGg9IjIiLz4KPHBhdGggZD0iTTEwIDEySDIyVjE4SDEwVjEyWiIgZmlsbD0iI2ZmZmZmZiIvPgo8Y2lyY2xlIGN4PSIxNiIgY3k9IjE0IiByPSIxLjUiIGZpbGw9IiMwZjAwODEiLz4KPHBhdGggZD0iTTE0IDI0QzE0IDI2LjIwOTEgMTUuNzkwOSAyOCAxOCAyOEMyMC4yMDkxIDI4IDIyIDI2LjIwOTEgMjIgMjQiIHN0cm9rZT0iI2ZmZmZmZiIgc3Ryb2tlLXdpZHRoPSIyIiBzdHJva2UtbGluZWNhcD0icm91bmQiLz4KPC9zdmc+">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
   <link rel="stylesheet" href="style.css">
   <link rel="stylesheet" href="support.css">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/feather-icons/dist/feather.min.css">
@@ -16,15 +16,31 @@
   <!-- <header class="header-part"> -->
     <nav>
       <div class="navbar">
-        <a href="#" class="logo"
+        <a href="./index.html" class="logo"
           ><i class="fas fa-chart-line"></i> Finance Tracker</a
         >
         <ul class="nav-links">
-          <li><a href="#">Home</a></li>
-          <li><a href="#tracker">Use Tracker</a></li>
-          <li><a href="#how-it-works">How it works</a></li>
-          <li><a href="./support.html">Support</a></li>
+          <li><a href="./index.html">Home</a></li>
+          <li><a href="./index.html#tracker">Use Tracker</a></li>
+          <li><a href="./index.html#how-it-works">How it Works</a></li>
+          <li><a href="./index.html#invite">Community</a></li>
+          <li><a href="./support.html" class="active">Support</a></li>
         </ul>
+        
+        <!-- Search Bar -->
+        <div class="search-container">
+          <div class="search-bar">
+            <i class="fas fa-search search-icon"></i>
+            <input type="text" id="search-input" placeholder="Search" class="search-input">
+            <div class="search-shortcut">
+              <span class="shortcut-key">⌘</span>
+              <span class="shortcut-key">K</span>
+              <span class="shortcut-separator">/</span>
+              <span class="shortcut-key">Ctrl</span>
+              <span class="shortcut-key">K</span>
+            </div>
+          </div>
+        </div>
         <div class="buttons">
           <a href="./login.html" class="btn-head"
             ><i class="fas fa-sign-in-alt"></i> Log In</a
@@ -33,42 +49,185 @@
             ><i class="fas fa-user-plus"></i> Sign Up</a>
           
         </div>
-        <!-- <div class="menu-toggle">
+        <div class="menu-toggle" id="menu-toggle">
             <i class="fas fa-bars"></i>
-        </div> -->
+        </div>
       </div>
     </nav>
-    <div class="container">
-      <form class="signup-form" action="/signup" method="post">
-        <h2>How can we help you?</h2>
-        <div class="form-group">
-          <label for="fullname">Full Name <span>*</span></label>
-          <input type="text" id="fullname" name="fullname" required>
+    <!-- Support Hero Section -->
+    <section class="support-hero">
+      <div class="support-hero-content">
+        <div class="support-hero-text">
+          <h1>How can we help you?</h1>
+          <p>Get the support you need to make the most of your finance tracking experience. Our team is here to help you succeed.</p>
+          
+          <div class="support-benefits">
+            <div class="benefit-item">
+              <i class="fas fa-clock"></i>
+              <span>24/7 Support</span>
+            </div>
+            <div class="benefit-item">
+              <i class="fas fa-shield-alt"></i>
+              <span>Secure & Private</span>
+            </div>
+            <div class="benefit-item">
+              <i class="fas fa-users"></i>
+              <span>Expert Team</span>
+            </div>
+          </div>
         </div>
-        <div class="form-group">
-          <label for="email">Email Address <span>*</span></label>
-          <input type="email" id="email" name="email" required>
-        </div>
-        <!-- <div class="form-group">
-          <label for="username">Username</label>
-          <input type="text" id="username" name="username" required>
-        </div> -->
         
-        <div class="form-group">
-          <label for="query">Query <span>*</span></label>
-          <textarea name="query" id="query"></textarea>
+        <div class="support-hero-image">
+          <div class="floating-card support-card-1">
+            <i class="fas fa-headset"></i>
+            <h3>Live Chat</h3>
+            <p>Get instant help</p>
+          </div>
+          <div class="floating-card support-card-2">
+            <i class="fas fa-envelope"></i>
+            <h3>Email Support</h3>
+            <p>Detailed responses</p>
+          </div>
+          <div class="floating-card support-card-3">
+            <i class="fas fa-question-circle"></i>
+            <h3>FAQ</h3>
+            <p>Quick answers</p>
+          </div>
         </div>
-        <button type="submit">Submit</button>
-      </form>
-    </div>
+      </div>
+    </section>
+
+    <!-- Support Form Section -->
+    <section class="support-container">
+      <div class="support-form-wrapper">
+        <div class="support-form-header">
+          <h2>Send us a message</h2>
+          <p>Fill out the form below and we'll get back to you within 24 hours</p>
+        </div>
+        
+        <form class="modern-support-form" action="/support" method="post">
+          <div class="form-row">
+            <div class="form-group">
+              <label for="fullname">
+                <i class="fas fa-user"></i>
+                Full Name <span>*</span>
+              </label>
+              <input type="text" id="fullname" name="fullname" required placeholder="Enter your full name">
+            </div>
+            
+            <div class="form-group">
+              <label for="email">
+                <i class="fas fa-envelope"></i>
+                Email Address <span>*</span>
+              </label>
+              <input type="email" id="email" name="email" required placeholder="Enter your email address">
+            </div>
+          </div>
+          
+          <div class="form-group">
+            <label for="subject">
+              <i class="fas fa-tag"></i>
+              Subject <span>*</span>
+            </label>
+            <input type="text" id="subject" name="subject" required placeholder="What's this about?">
+          </div>
+          
+          <div class="form-group">
+            <label for="priority">
+              <i class="fas fa-exclamation-triangle"></i>
+              Priority Level
+            </label>
+            <select id="priority" name="priority">
+              <option value="low">Low - General question</option>
+              <option value="medium" selected>Medium - Need assistance</option>
+              <option value="high">High - Urgent issue</option>
+            </select>
+          </div>
+          
+          <div class="form-group">
+            <label for="query">
+              <i class="fas fa-comment-alt"></i>
+              Message <span>*</span>
+            </label>
+            <textarea name="query" id="query" required placeholder="Describe your issue or question in detail..."></textarea>
+          </div>
+          
+          <div class="checkbox-group">
+            <label class="checkbox-label">
+              <input type="checkbox" required>
+              <span class="checkmark"></span>
+              I agree to the <a href="#">Terms of Service</a> and <a href="#">Privacy Policy</a>
+            </label>
+          </div>
+          
+          <button type="submit" class="support-btn">
+            <i class="fas fa-paper-plane"></i>
+            Send Message
+          </button>
+        </form>
+        
+        <div class="support-footer">
+          <p>Need immediate help? <a href="mailto:support@financetracker.com">Email us directly</a> or call <a href="tel:+15551234567">+1 (555) 123-4567</a></p>
+        </div>
+      </div>
+    </section>
 
 <footer>
-  <div class="footer">
-    <ul>
-      <li><a href="#">Privacy Policy</a></li>
-      <li><a href="#">Terms of Service</a></li>
-      <li><a href="#">Contact Us</a></li>
-    </ul>
+  <div class="footer-container">
+    <div class="footer-content">
+      <div class="footer-section">
+        <div class="footer-logo">
+          <i class="fas fa-chart-line"></i>
+          <h3>Finance Tracker</h3>
+        </div>
+        <p class="footer-description">
+          Take control of your finances with our comprehensive personal finance tracking tool. 
+          Manage your income, expenses, and financial goals effortlessly.
+        </p>
+        <div class="social-links">
+          <a href="#" class="social-link"><i class="fab fa-github"></i></a>
+          <a href="#" class="social-link"><i class="fab fa-linkedin"></i></a>
+          <a href="#" class="social-link"><i class="fab fa-twitter"></i></a>
+          <a href="#" class="social-link"><i class="fab fa-facebook"></i></a>
+        </div>
+      </div>
+      
+      <div class="footer-section">
+        <h4>Quick Links</h4>
+        <ul class="footer-links">
+          <li><a href="./index.html#tracker">Use Tracker</a></li>
+          <li><a href="./index.html#how-it-works">How it Works</a></li>
+          <li><a href="./index.html#invite">Community</a></li>
+          <li><a href="./support.html">Support</a></li>
+        </ul>
+      </div>
+      
+      <div class="footer-section">
+        <h4>Resources</h4>
+        <ul class="footer-links">
+          <li><a href="#">Privacy Policy</a></li>
+          <li><a href="#">Terms of Service</a></li>
+          <li><a href="#">Contact Us</a></li>
+          <li><a href="#">Help Center</a></li>
+        </ul>
+      </div>
+      
+      <div class="footer-section">
+        <h4>Contact Info</h4>
+        <div class="contact-info">
+          <p><i class="fas fa-envelope"></i> support@financetracker.com</p>
+          <p><i class="fas fa-phone"></i> +1 (555) 123-4567</p>
+          <p><i class="fas fa-map-marker-alt"></i> New York, NY</p>
+        </div>
+      </div>
+    </div>
+    
+    <div class="footer-bottom">
+      <div class="footer-bottom-content">
+        <p>&copy; 2025 Finance Tracker. All rights reserved.</p>
+        <p class="developer-credit">Created by <strong>Neeraj Meena</strong> - Full Stack MERN Developer</p>
+      </div>
+    </div>
   </div>
 </footer>
 <script>feather.replace();</script>
