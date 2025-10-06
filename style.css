@@ -2516,7 +2516,7 @@ input:focus:valid, select:focus:valid, textarea:focus:valid {
 }
 html { scroll-behavior: smooth; } 
 
-#features { scroll-margin-top: 100px; } 
+#features { scroll-margin-top: 80px;} 
 
 .features-section { padding: 4rem 0; }
 
