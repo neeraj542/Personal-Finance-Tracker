@@ -1514,3 +1514,33 @@ footer {
   0% { left: -100%; }
   100% { left: 100%; }
 }
+.arrow { display: none !important; }
+/* --- Scroll Toggle (down/up chevron) --- */
+.scroll-toggle {
+  position: fixed;
+  right: 25px;      /* moved from center to bottom-right */
+  bottom: 25px;     /* a bit more spacing */
+  transform: none;  /* remove center translation */
+  width: 44px;
+  height: 44px;
+  border: 0;
+  border-radius: 999px;
+  background: rgba(255,255,255,0.1);
+  color: #fff;
+  box-shadow: 0 6px 24px rgba(0,0,0,0.25);
+  backdrop-filter: blur(6px);
+  cursor: pointer;
+  display: grid;
+  place-items: center;
+  transition: transform 200ms ease, opacity 200ms ease, background 200ms ease;
+  opacity: 0.9;
+  z-index: 999;
+}
+
+.scroll-toggle:hover { background: rgba(255,255,255,0.18); }
+.scroll-toggle:active { transform: translateX(-50%) scale(0.98); }
+.scroll-toggle.is-up svg { transform: rotate(180deg); }
+
+
+/* Disable legacy animated arrow so only the new toggle shows */
+

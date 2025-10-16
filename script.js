@@ -376,16 +376,22 @@ function updateTransactionTable() {
 }
 
 // Event listener for the Add Transaction button
-document
-  .getElementById("add-transaction-btn")
-  .addEventListener("click", addTransaction);
-
-// Event listener for the Save Transaction button
-document
-  .getElementById("save-transaction-btn")
-  .addEventListener("click", saveTransaction);
-
+//document
+//  .getElementById("add-transaction-btn")
+//  .addEventListener("click", addTransaction);
+//
+//// Event listener for the Save Transaction button
+//document
+//  .getElementById("save-transaction-btn")
+//  .addEventListener("click", saveTransaction);
+//
 // Initial update of the balance and transaction table
+const addBtn = document.getElementById("add-transaction-btn");
+if (addBtn) addBtn.addEventListener("click", addTransaction);
+
+const saveBtn = document.getElementById("save-transaction-btn");
+if (saveBtn) saveBtn.addEventListener("click", saveTransaction);
+
 updateBalance();
 updateTransactionTable();
 
@@ -1195,3 +1201,137 @@ function showSearchNotification(message, type = 'info') {
     }, 300);
   }, 3000);
 }
+//* ===== Scroll Toggle (Down/Up Arrow) ===== */
+//function () {
+// // Create the button if it doesn't exist
+// let btn = document.getElementById('scrollToggle');
+// if (!btn) {
+//   btn = document.createElement('button');
+//   btn.id = 'scrollToggle';
+//   btn.className = 'scroll-toggle';
+//   btn.setAttribute('aria-label', 'Scroll down');
+//   btn.title = 'Scroll down';
+//   btn.hidden = true; // hidden until we detect scrollable page
+//   btn.innerHTML = `
+//     <svg viewBox="0 0 24 24" width="24" height="24" aria-hidden="true">
+//       <path d="M6 9l6 6 6-6" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+//     </svg>
+//   `;
+//   // Append once DOM is ready; if already ready, append now
+//   if (document.readyState === 'loading') {
+//     document.addEventListener('DOMContentLoaded', () => document.body.appendChild(btn));
+//   } else {
+//     document.body.appendChild(btn);
+//   }
+// }
+//
+// const docEl = document.documentElement;
+// const threshold = 12; // px tolerance for "at bottom"
+//
+// function update() {
+//   const scrollH = docEl.scrollHeight;
+//   const winH = window.innerHeight;
+//   const y = window.scrollY || docEl.scrollTop;
+//
+//   // Hide if page is shorter than viewport
+//   if (scrollH <= winH + 1) {
+//     btn.hidden = true;
+//     return;
+//   }
+//   btn.hidden = false;
+//
+//   const atTop = y <= 20;
+//   const atBottom = Math.ceil(y + winH) >= (scrollH - threshold);
+//
+//   // Show DOWN only near the very top; otherwise show UP (and always at bottom)
+//   const shouldBeUp = !atTop || atBottom;
+//
+//   btn.classList.toggle('is-up', shouldBeUp);
+//   btn.setAttribute('aria-label', shouldBeUp ? 'Back to top' : 'Scroll down');
+//   btn.title = shouldBeUp ? 'Back to top' : 'Scroll down';
+//   btn.dataset.dir = shouldBeUp ? 'up' : 'down';
+// }
+//
+// // Click behavior
+// btn.addEventListener('click', () => {
+//   const dir = btn.dataset.dir;
+//   if (dir === 'down') {
+//     window.scrollTo({ top: window.scrollY + window.innerHeight, behavior: 'smooth' });
+//   } else {
+//     window.scrollTo({ top: 0, behavior: 'smooth' });
+//   }
+// });
+//
+// // Keep state in sync
+// window.addEventListener('scroll', update, { passive: true });
+// window.addEventListener('resize', update);
+// document.addEventListener('DOMContentLoaded', update);
+// update();
+//)();
+//
+
+/* ===== Scroll Toggle (Down/Up Arrow) ===== */
+/* ===== Scroll Toggle (Down/Up Arrow) ===== */
+/* ===== Scroll Toggle (Down/Up Arrow) ===== */
+/* ===== Scroll Toggle (Down/Up Arrow) — FINAL ===== */
+(function () {
+  const root = document.scrollingElement || document.documentElement;
+  const threshold = 12;
+
+  // create once
+  const btn = document.createElement("button");
+  btn.id = "scrollToggle";
+  btn.className = "scroll-toggle";
+  btn.setAttribute("aria-label", "Scroll down");
+  btn.title = "Scroll down";
+  btn.innerHTML = `
+    <svg viewBox="0 0 24 24" width="24" height="24" aria-hidden="true">
+      <path d="M6 9l6 6 6-6" fill="none" stroke="currentColor"
+            stroke-width="2" stroke-linecap="round"/>
+    </svg>
+  `;
+  document.body.appendChild(btn);
+
+  function update() {
+    const scrollH = root.scrollHeight;
+    const winH = window.innerHeight;
+    const y = root.scrollTop;
+
+    // hide if not scrollable
+    if (scrollH <= winH + 2) {
+      btn.style.display = "none";
+      return;
+    }
+    btn.style.display = "grid";
+
+    const atTop = y < 10;
+    const atBottom = y + winH >= scrollH - threshold;
+    const showUp = !atTop || atBottom;
+
+    btn.classList.toggle("is-up", showUp);
+    btn.dataset.dir = showUp ? "up" : "down";
+    btn.title = showUp ? "Back to top" : "Scroll down";
+    btn.setAttribute("aria-label", btn.title);
+  }
+
+  btn.addEventListener("click", () => {
+    const dir = btn.dataset.dir;
+    if (dir === "down") {
+      root.scrollTo({
+        top: root.scrollTop + window.innerHeight,
+        behavior: "smooth",
+      });
+    } else {
+      root.scrollTo({ top: 0, behavior: "smooth" });
+    }
+  });
+
+  window.addEventListener("scroll", update, { passive: true });
+  window.addEventListener("resize", update);
+  window.addEventListener("load", () => {
+    update();
+    setTimeout(update, 300);
+  });
+})();
+
+console.log("loaded??");
